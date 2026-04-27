@@ -1,0 +1,26 @@
+#!/usr/bin/env Rscript
+
+set.seed(0)
+n <- 1000L
+h <- 120L
+block_num <- 1L
+epsilon <- 0.1
+gaussian <- TRUE
+true_cps <- c(500L)
+y <- c(rnorm(500, 0, 1), rnorm(500, 1, 1))
+outlier_idx <- c(80L, 150L, 220L, 310L, 420L, 560L, 640L, 730L, 820L, 910L)
+outlier_shift <- c(12, -11, 10, -13, 11, 12, -10, 13, -12, 11)
+y[outlier_idx] <- y[outlier_idx] + outlier_shift
+
+t0 <- proc.time()[["elapsed"]]
+ans <- changepoints::ARC(y, h = h, block_num = block_num, epsilon = epsilon, gaussian = gaussian)
+elapsed <- proc.time()[["elapsed"]] - t0
+
+cat("n =", n, "\n")
+cat("h =", h, "\n")
+cat("block_num =", block_num, "\n")
+cat("epsilon =", epsilon, "\n")
+cat("gaussian =", gaussian, "\n")
+cat("true changepoints =", paste(true_cps, collapse = " "), "\n")
+cat("estimated changepoints =", paste(ans, collapse = " "), "\n")
+cat(sprintf("elapsed seconds = %.3f\n", elapsed))
