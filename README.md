@@ -4,6 +4,8 @@
 
 The project is comparison-driven: most workflows generate deterministic data, run a reference implementation, run the Fortran implementation, and print matching summaries or checksums.
 
+See [`COVERAGE.md`](COVERAGE.md) for the full list of registered comparison cases.
+
 ## Scope
 
 The repository covers a broad range of changepoint methods:
@@ -32,7 +34,7 @@ The files follow a regular naming convention:
 | `x*_file.R` | R reference implementations |
 | `x*_file.py` | Python reference implementations |
 | `xrun_compare.py` | comparison runner for registered cases |
-| `Makefile.xcorr` | main build file for Fortran executables |
+| `Makefile` | main build file for Fortran executables |
 
 There are hundreds of source files. The best entry point is usually the comparison case name in `xrun_compare.py`, then the matching generator, reference script, and Fortran driver.
 
@@ -51,16 +53,16 @@ Some optional comparisons require additional package-specific dependencies, for 
 
 ## Build
 
-Build individual Fortran comparison executables with `Makefile.xcorr`:
+Build individual Fortran comparison executables with `Makefile`:
 
 ```powershell
-make -f Makefile.xcorr xsim_changepointnp_file
+make xsim_changepointnp_file
 ```
 
 For another example:
 
 ```powershell
-make -f Makefile.xcorr xsim_mcp_arsigma_file
+make xsim_mcp_arsigma_file
 ```
 
 The makefile contains targets for the comparison executables used by `xrun_compare.py`.
@@ -93,7 +95,7 @@ python xrun_compare.py xstepmented
 Build the corresponding executable first when a case requires one:
 
 ```powershell
-make -f Makefile.xcorr xsim_cpm_ks_file
+make xsim_cpm_ks_file
 python xrun_compare.py xcpm_ks
 ```
 
