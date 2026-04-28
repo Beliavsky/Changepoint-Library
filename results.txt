@@ -1,0 +1,5290 @@
+python xrun_compare.py --all
+
+=== xbinseg (1/117) ===
+[1/4] Running xbinseg_make_data.py
+wrote 50000 observations to xbinseg_data.txt
+true bkps = [9999, 19935, 29954, 40356, 50000]
+
+[2/4] Running xbinseg_file.py
+file = xbinseg_data.txt
+n = 50000
+n_bkps = 4
+min_size = 2000
+estimated bkps = [9999, 19934, 29954, 40356, 50000]
+elapsed seconds = 7.679
+
+[3/4] Running xbinseg_file.R
+file = xbinseg_data.txt 
+n = 50000 
+n_bkps = 4 
+min_size = 2000 
+estimated bkps = 9999 19934 29954 40356 50000 
+elapsed seconds = 0.560
+
+[4/4] Running xsim_mean_binseg_file.exe
+ file        =xbinseg_data.txt
+ n           =       50000
+ max_cp      =           4
+ min_seg_len =        2000
+ ncp_found   =           4
+ estimated   =        9999       19934       29954       40356
+
+wall time elapsed (s):     0.5047
+
+time elapsed (s)
+          xbinseg_make_data.py  xbinseg_file.py  xbinseg_file.R  xsim_mean_binseg_file.exe
+absolute                 0.921            8.502           0.744                      0.548
+relative                 0.108            1.000           0.088                      0.064
+
+Completed successfully.
+
+=== xbottomup (2/117) ===
+[1/4] Running xbottomup_make_data.py
+wrote 100000 observations to xbottomup_data.txt
+true bkps = [20208, 40770, 59722, 81419, 100000]
+
+[2/4] Running xbottomup_file.py
+file = xbottomup_data.txt
+n = 100000
+n_bkps = 4
+min_size = 4000
+initial bkps = [37500, 43750, 62500, 81250, 100000]
+estimated bkps = [40770, 58500, 62500, 81418, 100000]
+elapsed seconds = 0.613
+
+[3/4] Running xbottomup_file.R
+file = xbottomup_data.txt 
+n = 100000 
+n_bkps = 4 
+min_size = 4000 
+initial bkps = 37500 43750 62500 81250 100000 
+estimated bkps = 40770 58500 62500 81418 100000 
+elapsed seconds = 17.790
+
+[4/4] Running xsim_mean_bottomup_file.exe
+ file        =xbottomup_data.txt
+ n           =      100000
+ n_bkps      =           4
+ min_seg_len =        4000
+ jump        =           5
+ initial     =       37500       43750       62500       81250      100000
+ estimated   =       40770       58500       62500       81418      100000
+
+wall time elapsed (s):     1.0631
+
+time elapsed (s)
+          xbottomup_make_data.py  xbottomup_file.py  xbottomup_file.R  xsim_mean_bottomup_file.exe
+absolute                   1.057              1.495            17.968                        1.120
+relative                   0.707              1.000            12.020                        0.749
+
+Completed successfully.
+
+=== xdynp (3/117) ===
+[1/4] Running xdynp_make_data.py
+wrote 600 observations to xdynp_data.txt
+true bkps = [157, 308, 454, 600]
+
+[2/4] Running xdynp_file.py
+file = xdynp_data.txt
+n = 600
+n_bkps = 3
+min_size = 30
+estimated bkps = [157, 307, 454, 600]
+elapsed seconds = 2.175
+
+[3/4] Running xdynp_file.R
+file = xdynp_data.txt 
+n = 600 
+n_bkps = 3 
+min_size = 30 
+estimated bkps = 157 307 454 600 
+elapsed seconds = 0.620
+
+[4/4] Running xsim_mean_dynp_file.exe
+ file        =xdynp_data.txt
+ n           =         600
+ n_bkps      =           3
+ min_seg_len =          30
+ estimated   =         157         307         454         600
+
+wall time elapsed (s):     0.0089
+
+time elapsed (s)
+          xdynp_make_data.py  xdynp_file.py  xdynp_file.R  xsim_mean_dynp_file.exe
+absolute               0.833          3.028         0.777                    0.055
+relative               0.275          1.000         0.257                    0.018
+
+Completed successfully.
+
+=== xmean_shift (4/117) ===
+[1/4] Running xmean_shift_make_data.py
+wrote 10000 observations to xmean_shift_data.txt
+true bkps = [3333, 5833, 10000]
+
+[2/4] Running xmean_shift_file.py
+file = xmean_shift_data.txt
+n = 10000
+pen = 10.0
+min_size = 500
+estimated bkps = [3330, 5835, 10000]
+elapsed seconds = 7.999
+
+[3/4] Running xmean_shift_file.R
+file = xmean_shift_data.txt 
+n = 10000 
+pen = 10 
+min_size = 500 
+estimated bkps = 3330 5835 10000 
+elapsed seconds = 0.530
+
+[4/4] Running xsim_mean_pelt_file.exe
+ file        =xmean_shift_data.txt
+ n           =       10000
+ pen         =   10.000000000000000     
+ min_seg_len =         500
+ jump        =           5
+ n_bkps      =           2
+ estimated   =        3330        5835       10000
+
+wall time elapsed (s):     0.0975
+
+time elapsed (s)
+          xmean_shift_make_data.py  xmean_shift_file.py  xmean_shift_file.R  xsim_mean_pelt_file.exe
+absolute                     0.177                8.862               0.710                    0.139
+relative                     0.020                1.000               0.080                    0.016
+
+Completed successfully.
+
+=== xmultivar (5/117) ===
+[1/4] Running xmultivar_make_data.py
+wrote 9000 x 2 matrix to xmultivar_data.txt
+true bkps = [3000, 6000, 9000]
+
+[2/4] Running xmultivar_file.py
+file = xmultivar_data.txt
+n = 9000
+p = 2
+pen = 12.0
+min_size = 450
+estimated bkps = [3005, 6000, 9000]
+elapsed seconds = 12.786
+
+[3/4] Running xmultivar_file.R
+file = xmultivar_data.txt 
+n = 9000 
+p = 2 
+pen = 12 
+min_size = 450 
+estimated bkps = 3005 6000 9000 
+elapsed seconds = 1.500
+
+[4/4] Running xsim_multivar_pelt_file.exe
+ file        =xmultivar_data.txt
+ n           =        9000
+ p           =           2
+ pen         =   12.000000000000000     
+ min_seg_len =         450
+ jump        =           5
+ n_bkps      =           2
+ estimated   =        3005        6000        9000
+
+wall time elapsed (s):     0.0532
+
+time elapsed (s)
+          xmultivar_make_data.py  xmultivar_file.py  xmultivar_file.R  xsim_multivar_pelt_file.exe
+absolute                   0.205             13.691             1.664                        0.105
+relative                   0.015              1.000             0.122                        0.008
+
+Completed successfully.
+
+=== xwindow (6/117) ===
+[1/4] Running xwindow_make_data.py
+wrote 400000 observations to xwindow_data.txt
+true bkps = [100779, 204156, 310798, 400000]
+
+[2/4] Running xwindow_file.py
+file = xwindow_data.txt
+n = 400000
+width = 40000
+n_bkps = 3
+estimated bkps = [np.int64(100780), np.int64(204155), np.int64(310800), 400000]
+elapsed seconds = 15.630
+
+[3/4] Running xwindow_file.R
+file = xwindow_data.txt 
+n = 400000 
+width = 40000 
+n_bkps = 3 
+estimated bkps = 100780 204155 310800 400000 
+elapsed seconds = 21.790
+
+[4/4] Running xsim_window_file.exe
+ file        =xwindow_data.txt
+ n           =      400000
+ width       =       40000
+ n_bkps      =           3
+ estimated   =      100780      204155      310800      400000
+
+wall time elapsed (s):     6.1073
+
+time elapsed (s)
+          xwindow_make_data.py  xwindow_file.py  xwindow_file.R  xsim_window_file.exe
+absolute                 1.560           16.526          22.015                 6.150
+relative                 0.094            1.000           1.332                 0.372
+
+Completed successfully.
+
+=== xamoc (7/117) ===
+[1/3] Running xamoc_make_data.py
+wrote 200 observations to xamoc_data.txt
+true changepoint = 100
+
+[2/3] Running xamoc_file.R
+file = xamoc_data.txt 
+n = 200 
+penalty = SIC 
+minseglen = 1 
+estimated changepoint = 100 
+conf.value = 0.9999995
+elapsed seconds = 0.090
+
+[3/3] Running xsim_mean_amoc_file.exe
+ file               =xamoc_data.txt
+ n                  =         200
+ penalty            =SIC
+ minseglen          =           1
+ estimated          =         100
+ conf.value         =  0.99999949787167608     
+
+wall time elapsed (s):     0.0033
+
+time elapsed (s)
+          xamoc_make_data.py  xamoc_file.R  xsim_mean_amoc_file.exe
+absolute               0.208         0.287                    0.059
+relative               0.724         1.000                    0.207
+
+Completed successfully.
+
+=== xreg (8/117) ===
+[1/3] Running xreg_make_data.py
+wrote 200 observations to xreg_data.txt
+true changepoint = 100
+
+[2/3] Running xreg_file.R
+file = xreg_data.txt 
+n = 200 
+penalty = SIC 
+minseglen = 5 
+estimated changepoint = 100 
+pen.value = 21.19327
+elapsed seconds = 0.110
+
+[3/3] Running xsim_reg_amoc_file.exe
+ file               =xreg_data.txt
+ n                  =         200
+ penalty            =SIC
+ minseglen          =           5
+ estimated          =         100
+ pen.value          =   21.193269466192145     
+
+wall time elapsed (s):     0.0035
+
+time elapsed (s)
+          xreg_make_data.py  xreg_file.R  xsim_reg_amoc_file.exe
+absolute              0.204        0.303                   0.046
+relative              0.675        1.000                   0.151
+
+Completed successfully.
+
+=== xcss (9/117) ===
+[1/3] Running xcss_make_data.py
+wrote 200 observations to xcss_data.txt
+true changepoint = 100
+
+[2/3] Running xcss_file.R
+Warning message:
+In changepoint::cpt.var(x, penalty = "Manual", pen.value = "log(2*log(n))",  :
+  Traditional penalty values are not appropriate for the CSS test statistic
+file = xcss_data.txt 
+n = 200 
+penalty = Manual 
+pen.value = log(2*log(n)) 
+minseglen = 2 
+estimated changepoint = 103 
+elapsed seconds = 0.110
+
+[3/3] Running xsim_var_css_amoc_file.exe
+ file               =xcss_data.txt
+ n                  =         200
+ penalty            =Manual
+ pen.value          =   2.3605364727014044     
+ minseglen          =           2
+ estimated          =         103
+ test statistic     =   4.9630611876406254     
+
+wall time elapsed (s):     0.0031
+
+time elapsed (s)
+          xcss_make_data.py  xcss_file.R  xsim_var_css_amoc_file.exe
+absolute              0.241        0.305                       0.056
+relative              0.790        1.000                       0.185
+
+Completed successfully.
+
+=== xcusum (10/117) ===
+[1/3] Running xcusum_make_data.py
+wrote 200 observations to xcusum_data.txt
+true changepoint = 100
+
+[2/3] Running xcusum_file.R
+Warning message:
+In changepoint::cpt.mean(x, penalty = penalty_name, pen.value = penalty_value,  :
+  Traditional penalty values are not appropriate for the CUSUM test statistic
+file = xcusum_data.txt 
+n = 200 
+penalty = Manual 
+pen.value = 0.5 
+minseglen = 1 
+estimated changepoint = 101 
+test statistic = 1.249974827439
+effective penalty = 0.500000000000
+elapsed seconds = 0.130
+
+[3/3] Running xsim_mean_cusum_amoc_file.exe
+ file               =xcusum_data.txt
+ n                  =         200
+ penalty            =Manual
+ pen.value          =  0.50000000000000000     
+ minseglen          =           1
+ estimated          =         101
+ test statistic     =   1.2499748274391345     
+ effective penalty  =  0.50000000000000000     
+
+wall time elapsed (s):     0.0050
+
+time elapsed (s)
+          xcusum_make_data.py  xcusum_file.R  xsim_mean_cusum_amoc_file.exe
+absolute                0.211          0.320                          0.042
+relative                0.659          1.000                          0.132
+
+Completed successfully.
+
+=== xpoisson (11/117) ===
+[1/3] Running xpoisson_make_data.py
+wrote 200 observations to xpoisson_data.txt
+true changepoint = 100
+
+[2/3] Running xpoisson_file.R
+file = xpoisson_data.txt 
+n = 200 
+penalty = MBIC 
+minseglen = 1 
+estimated changepoint = 100 
+null = -7188.418715
+alt = -7472.356888
+alt.mbic = -7463.136597
+pen.value = 15.894952
+elapsed seconds = 0.120
+
+[3/3] Running xsim_meanvar_poisson_amoc_file.exe
+ file               =xpoisson_data.txt
+ n                  =         200
+ penalty            =MBIC
+ minseglen          =           1
+ estimated          =         100
+ null               =  -7188.4187152304148     
+ alt                =  -7472.3568879899285     
+ alt.mbic           =  -7463.1365972870990     
+ pen.value          =   15.894952099644108     
+
+wall time elapsed (s):     0.0041
+
+time elapsed (s)
+          xpoisson_make_data.py  xpoisson_file.R  xsim_meanvar_poisson_amoc_file.exe
+absolute                  0.222            0.321                               0.072
+relative                  0.693            1.000                               0.225
+
+Completed successfully.
+
+=== xexp (12/117) ===
+[1/3] Running xexp_make_data.py
+wrote 200 observations to xexp_data.txt
+true changepoint = 100
+
+[2/3] Running xexp_file.R
+file = xexp_data.txt 
+n = 200 
+penalty = MBIC 
+minseglen = 1 
+estimated changepoint = 100 
+p.value = 0.9769026
+null = 877.117549
+alt = 838.144397
+alt.mbic = 847.364688
+decision pen.value = 0.000000
+elapsed seconds = 0.110
+
+[3/3] Running xsim_meanvar_exp_amoc_file.exe
+ file               =xexp_data.txt
+ n                  =         200
+ penalty            =MBIC
+ minseglen          =           1
+ estimated          =         100
+ p.value            =  0.97690261309975723     
+ null               =   877.11754925788318     
+ alt                =   838.14439705673499     
+ alt.mbic           =   847.36468775956428     
+ decision pen.value =   0.0000000000000000     
+
+wall time elapsed (s):     0.0032
+
+time elapsed (s)
+          xexp_make_data.py  xexp_file.R  xsim_meanvar_exp_amoc_file.exe
+absolute              0.208        0.304                           0.057
+relative              0.685        1.000                           0.188
+
+Completed successfully.
+
+=== xgamma (13/117) ===
+[1/3] Running xgamma_make_data.py
+wrote 200 observations to xgamma_data.txt
+true changepoint = 100
+shape = 2.0
+
+[2/3] Running xgamma_file.R
+file = xgamma_data.txt 
+n = 200 
+shape = 2 
+penalty = MBIC 
+minseglen = 2 
+estimated changepoint = 99 
+null = 1118.791229
+alt = 1027.761667
+alt.mbic = 1036.981760
+pen.value = 15.894952
+elapsed seconds = 0.110
+
+[3/3] Running xsim_meanvar_gamma_amoc_file.exe
+ file               =xgamma_data.txt
+ n                  =         200
+ shape              =   2.0000000000000000     
+ penalty            =MBIC
+ minseglen          =           2
+ estimated          =          99
+ null               =   1118.7912294418738     
+ alt                =   1027.7616670089210     
+ alt.mbic           =   1036.9817596723399     
+ pen.value          =   15.894952099644108     
+
+wall time elapsed (s):     0.0032
+
+time elapsed (s)
+          xgamma_make_data.py  xgamma_file.R  xsim_meanvar_gamma_amoc_file.exe
+absolute                0.208          0.286                             0.059
+relative                0.730          1.000                             0.206
+
+Completed successfully.
+
+=== xwbs (14/117) ===
+[1/3] Running xwbs_make_data.py
+wrote 300 observations to xwbs_data.txt
+wrote 300 intervals to xwbs_data_intervals.txt
+true changepoints = [20, 50, 170]
+
+[2/3] Running xwbs_file.R
+file = xwbs_data.txt 
+interval_file = xwbs_data_intervals.txt 
+n = 300 
+M = 300 
+delta = 5 
+tau = 4 
+estimated changepoints = 19 50 170 
+raw nodes = 39 
+elapsed seconds = 2.510
+
+[3/3] Running xsim_wbs_univar_file.exe
+ file               =xwbs_data.txt
+ interval_file      =xwbs_data_intervals.txt
+ n                  =         300
+ M                  =         300
+ delta              =           5
+ tau                =   4.0000000000000000     
+ estimated          = 19 50 170
+ raw nodes          =          39
+
+wall time elapsed (s):     0.0097
+
+time elapsed (s)
+          xwbs_make_data.py  xwbs_file.R  xsim_wbs_univar_file.exe
+absolute              0.202        2.713                     0.053
+relative              0.074        1.000                     0.020
+
+Completed successfully.
+
+=== xwbs_rob (15/117) ===
+[1/3] Running xwbs_rob_make_data.py
+wrote 300 observations to xwbs_rob_data.txt
+wrote 300 intervals to xwbs_rob_data_intervals.txt
+true changepoints = [20, 50, 170]
+outlier_idx = [15, 35, 60, 90, 140, 180, 220, 260, 290]
+outlier_shift = [15.0, -12.0, 14.0, -16.0, 13.0, 12.0, -14.0, 15.0, -13.0]
+
+[2/3] Running xwbs_rob_file.R
+file = xwbs_rob_data.txt 
+interval_file = xwbs_rob_data_intervals.txt 
+n = 300 
+M = 300 
+K = 1.345 
+delta = 5 
+tau = 8 
+estimated changepoints = 20 50 170 240 
+raw nodes = 46 
+elapsed seconds = 1.060
+
+[3/3] Running xsim_wbs_univar_rob_file.exe
+ file               =xwbs_rob_data.txt
+ interval_file      =xwbs_rob_data_intervals.txt
+ n                  =         300
+ M                  =         300
+ K                  =   1.3450000000000000     
+ delta              =           5
+ tau                =   8.0000000000000000     
+ estimated          = 20 50 170 240
+ raw nodes          =          46
+
+wall time elapsed (s):     0.0156
+
+time elapsed (s)
+          xwbs_rob_make_data.py  xwbs_rob_file.R  xsim_wbs_univar_rob_file.exe
+absolute                  0.207            1.266                         0.068
+relative                  0.164            1.000                         0.054
+
+Completed successfully.
+
+=== xarc (16/117) ===
+[1/3] Running xarc_make_data.py
+wrote 1000 observations to xarc_data.txt
+true changepoints = [500]
+outlier_idx = [80, 150, 220, 310, 420, 560, 640, 730, 820, 910]
+outlier_shift = [12.0, -11.0, 10.0, -13.0, 11.0, 12.0, -10.0, 13.0, -12.0, 11.0]
+
+[2/3] Running xarc_file.R
+file = xarc_data.txt 
+n = 1000 
+h = 120 
+block_num = 1 
+epsilon = 0.1 
+gaussian = TRUE 
+estimated changepoints = 500 
+elapsed seconds = 1.240
+
+[3/3] Running xsim_arc_univar_file.exe
+ file               =xarc_data.txt
+ n                  =        1000
+ h                  =         120
+ block_num          =           1
+ epsilon            =  0.10000000000000001     
+ gaussian           = T
+ lambda             =  0.91045627763108772     
+ estimated          = 500
+
+wall time elapsed (s):     0.0175
+
+time elapsed (s)
+          xarc_make_data.py  xarc_file.R  xsim_arc_univar_file.exe
+absolute              0.223        1.407                     0.060
+relative              0.159        1.000                     0.043
+
+Completed successfully.
+
+=== xaarc (17/117) ===
+[1/3] Running xaarc_make_data.py
+wrote 1000 observations to xaarc_data.txt
+true changepoints = [500]
+outlier_idx = [80, 150, 220, 310, 420, 560, 640, 730, 820, 910]
+outlier_shift = [12.0, -11.0, 10.0, -13.0, 11.0, 12.0, -10.0, 13.0, -12.0, 11.0]
+
+[2/3] Running xaarc_file.R
+file = xaarc_data.txt 
+n = 1000 
+t_dat_n = 200 
+h = 120 
+block_num = 1 
+guess_true = 0.05 
+estimated changepoints = 500 
+elapsed seconds = 3.590
+
+[3/3] Running xsim_aarc_univar_file.exe
+ file               =xaarc_data.txt
+ n                  =        1000
+ t_dat_n            =         200
+ h                  =         120
+ block_num          =           1
+ guess_true         =   5.0000000000000003E-002
+ eps_hat            =  0.32000000000000001     
+ arc epsilon        =   9.7537887487646774E-002
+ lambda             =  0.91045627763108772     
+ estimated          = 500
+
+wall time elapsed (s):     0.1276
+
+time elapsed (s)
+          xaarc_make_data.py  xaarc_file.R  xsim_aarc_univar_file.exe
+absolute               0.224         3.807                      0.169
+relative               0.059         1.000                      0.044
+
+Completed successfully.
+
+=== xonline_univar (18/117) ===
+[1/3] Running xonline_univar_make_data.py
+wrote 150 observations to xonline_univar_data.txt
+wrote 149 thresholds to xonline_univar_data_thresholds.txt
+true changepoints = [100]
+
+[2/3] Running xonline_univar_file.R
+file = xonline_univar_data.txt 
+threshold_file = xonline_univar_data_thresholds.txt 
+n = 150 
+estimated changepoint = 105 
+elapsed seconds = 0.860
+
+[3/3] Running xsim_online_univar_file.exe
+ file               =xonline_univar_data.txt
+ threshold_file     =xonline_univar_data_thresholds.txt
+ n                  =         150
+ estimated          =         105
+
+wall time elapsed (s):     0.0051
+
+time elapsed (s)
+          xonline_univar_make_data.py  xonline_univar_file.R  xsim_online_univar_file.exe
+absolute                        0.224                  1.046                        0.049
+relative                        0.214                  1.000                        0.047
+
+Completed successfully.
+
+=== xbs_cov (19/117) ===
+[1/3] Running xbs_cov_make_data.py
+wrote xbs_cov_data.txt with shape 180 x 4
+
+[2/3] Running xbs_cov_file.R
+file = xbs_cov_data.txt 
+n = 180 
+p = 4 
+tau = 7 
+estimated changepoints = 64 120 
+raw nodes = 5 
+elapsed seconds = 0.990
+
+[3/3] Running xsim_bs_cov_file.exe
+ file               =xbs_cov_data.txt
+ n                  =         180
+ p                  =           4
+ tau                =   7.0000000000000000     
+ estimated          = 64 120
+ raw nodes          =           5
+
+wall time elapsed (s):     0.0063
+
+time elapsed (s)
+          xbs_cov_make_data.py  xbs_cov_file.R  xsim_bs_cov_file.exe
+absolute                 0.224           1.199                 0.063
+relative                 0.186           1.000                 0.052
+
+Completed successfully.
+
+=== xwbsip_cov (20/117) ===
+[1/3] Running xwbsip_cov_make_data.py
+wrote xwbsip_cov_data.txt
+wrote xwbsip_cov_data_prime.txt
+wrote xwbsip_cov_data_intervals.txt
+true changepoints = [80]
+
+[2/3] Running xwbsip_cov_file.R
+file = xwbsip_cov_data.txt 
+prime_file = xwbsip_cov_data_prime.txt 
+interval_file = xwbsip_cov_data_intervals.txt 
+n = 180 
+p = 4 
+M = 200 
+delta = 5 
+tau = 8 
+estimated changepoints = 81 
+raw nodes = 12 
+elapsed seconds = 20.780
+
+[3/3] Running xsim_wbsip_cov_file.exe
+ file               =xwbsip_cov_data.txt
+ prime_file         =xwbsip_cov_data_prime.txt
+ interval_file      =xwbsip_cov_data_intervals.txt
+ n                  =         180
+ p                  =           4
+ M                  =         200
+ delta              =           5
+ tau                =   8.0000000000000000     
+ estimated          = 81
+ raw nodes          =          11
+
+wall time elapsed (s):     0.4472
+
+time elapsed (s)
+          xwbsip_cov_make_data.py  xwbsip_cov_file.R  xsim_wbsip_cov_file.exe
+absolute                    0.241             21.099                    0.504
+relative                    0.011              1.000                    0.024
+
+Completed successfully.
+
+=== xdp_regression (21/117) ===
+[1/3] Running xdp_regression_make_data.py
+wrote xdp_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xdp_regression_file.R
+file = xdp_regression_data.txt 
+n = 120 
+p = 3 
+gamma = 2 
+lambda = 0.5 
+delta = 5 
+estimated changepoints = 40 80 
+elapsed seconds = 0.820
+
+[3/3] Running xsim_dp_regression_file.exe
+ file               =xdp_regression_data.txt
+ n                  =         120
+ p                  =           3
+ gamma              =   2.0000000000000000     
+ lambda             =  0.50000000000000000     
+ delta              =           5
+ estimated          = 40 80
+
+wall time elapsed (s):     0.0232
+
+time elapsed (s)
+          xdp_regression_make_data.py  xdp_regression_file.R  xsim_dp_regression_file.exe
+absolute                        0.193                  1.031                        0.076
+relative                        0.187                  1.000                        0.074
+
+Completed successfully.
+
+=== xdpdu_regression (22/117) ===
+[1/3] Running xdpdu_regression_make_data.py
+wrote xdpdu_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xdpdu_regression_file.R
+file = xdpdu_regression_data.txt 
+n = 120 
+p = 3 
+lambda = 0.5 
+zeta = 20 
+estimated changepoints = 40 80 
+beta checksum = 88.151568781138
+elapsed seconds = 0.780
+
+[3/3] Running xsim_dpdu_regression_file.exe
+ file               = xdpdu_regression_data.txt
+ n                  =          120
+ p                  =            3
+ lambda             =   0.50000000000000000     
+ zeta               =           20
+ estimated          = 40 80
+ beta checksum      =    88.151568781138167     
+
+wall time elapsed (s):     0.0066
+
+time elapsed (s)
+          xdpdu_regression_make_data.py  xdpdu_regression_file.R  xsim_dpdu_regression_file.exe
+absolute                          0.224                    1.010                          0.053
+relative                          0.221                    1.000                          0.053
+
+Completed successfully.
+
+=== xdpdu2_regression (23/117) ===
+[1/3] Running xdpdu2_regression_make_data.py
+wrote xdpdu2_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xdpdu2_regression_file.R
+file = xdpdu2_regression_data.txt 
+n = 120 
+p = 3 
+lambda = 0.5 
+zeta = 20 
+reference unavailable = changepoints:::DPDU2.regression not found
+
+[3/3] Running xsim_dpdu2_regression_file.exe
+ file               = xdpdu2_regression_data.txt
+ n                  =          120
+ p                  =            3
+ lambda             =   0.50000000000000000     
+ zeta               =           20
+ estimated          = 40 80
+ beta checksum      =    88.104157630261085     
+
+wall time elapsed (s):     0.0052
+
+time elapsed (s)
+          xdpdu2_regression_make_data.py  xdpdu2_regression_file.R  xsim_dpdu2_regression_file.exe
+absolute                           0.198                     1.021                           0.064
+relative                           0.194                     1.000                           0.063
+
+Completed successfully.
+
+=== xdp_poly (24/117) ===
+[1/3] Running xdp_poly_make_data.py
+wrote xdp_poly_data.txt with 150 rows
+true changepoints = [50, 100]
+
+[2/3] Running xdp_poly_file.R
+file = xdp_poly_data.txt 
+n = 150 
+r = 2 
+gamma = 1 
+delta = 5 
+estimated changepoints = 50 100 
+yhat checksum = 84.401753547246
+elapsed seconds = 1.020
+
+[3/3] Running xsim_dp_poly_file.exe
+ file               = xdp_poly_data.txt
+ n                  =          150
+ r                  =            2
+ gamma              =    1.0000000000000000     
+ delta              =            5
+ estimated          = 50 100
+ yhat checksum      =    84.401753547245946     
+
+wall time elapsed (s):     0.0204
+
+time elapsed (s)
+          xdp_poly_make_data.py  xdp_poly_file.R  xsim_dp_poly_file.exe
+absolute                  0.224            1.260                  0.190
+relative                  0.177            1.000                  0.151
+
+Completed successfully.
+
+=== xcv_dp_poly (25/117) ===
+[1/3] Running xcv_dp_poly_make_data.py
+wrote xcv_dp_poly_data.txt with 150 rows
+true changepoints = [50, 100]
+
+[2/3] Running xcv_dp_poly_file.R
+file = xcv_dp_poly_data.txt 
+n = 150 
+r = 2 
+gamma_set = 0.5 1 2 3 
+delta = 5 
+gamma = 0.5 
+estimated changepoints = 49 99 
+n changepoints = 2 
+test error = 0.448786103374
+train error = 0.352595339931
+gamma = 1 
+estimated changepoints = 99 
+n changepoints = 1 
+test error = 1.047973480419
+train error = 0.919018912945
+gamma = 2 
+estimated changepoints = 99 
+n changepoints = 1 
+test error = 1.047973480419
+train error = 0.919018912945
+gamma = 3 
+estimated changepoints = 99 
+n changepoints = 1 
+test error = 1.047973480419
+train error = 0.919018912945
+best gamma = 0.5 
+best index = 1 
+best changepoints = 49 99 
+best test error = 0.448786103374
+elapsed seconds = 1.140
+
+[3/3] Running xsim_cv_dp_poly_file.exe
+ file               = xcv_dp_poly_data.txt
+ n                  =          150
+ r                  =            2
+ gamma_set          =   0.50000000000000000        1.0000000000000000        2.0000000000000000        3.0000000000000000     
+ delta              =            5
+ gamma              =   0.50000000000000000     
+ estimated          = 49 99
+ n changepoints     =            2
+ test error         =   0.44878610337432778     
+ train error        =   0.35259533993137676     
+ gamma              =    1.0000000000000000     
+ estimated          = 99
+ n changepoints     =            1
+ test error         =    1.0479734804192544     
+ train error        =   0.91901891294500082     
+ gamma              =    2.0000000000000000     
+ estimated          = 99
+ n changepoints     =            1
+ test error         =    1.0479734804192544     
+ train error        =   0.91901891294500082     
+ gamma              =    3.0000000000000000     
+ estimated          = 99
+ n changepoints     =            1
+ test error         =    1.0479734804192544     
+ train error        =   0.91901891294500082     
+ best gamma         =   0.50000000000000000     
+ best index         =            1
+ best changepoints  = 49 99
+ best test error    =   0.44878610337432778     
+
+wall time elapsed (s):     0.0272
+
+time elapsed (s)
+          xcv_dp_poly_make_data.py  xcv_dp_poly_file.R  xsim_cv_dp_poly_file.exe
+absolute                     0.240               1.377                     0.174
+relative                     0.174               1.000                     0.127
+
+Completed successfully.
+
+=== xlocal_refine_poly (26/117) ===
+[1/3] Running xcv_dp_poly_make_data.py
+wrote xcv_dp_poly_data.txt with 150 rows
+true changepoints = [50, 100]
+
+[2/3] Running xlocal_refine_poly_file.R
+file = xcv_dp_poly_data.txt 
+n = 150 
+r = 2 
+gamma_set = 0.5 1 2 3 
+delta = 5 
+delta_lr = 5 
+best gamma = 0.5 
+initial changepoints = 49 99 
+refined changepoints = 51 101 
+elapsed seconds = 0.830
+
+[3/3] Running xsim_local_refine_poly_file.exe
+ file               = xcv_dp_poly_data.txt
+ n                  =          150
+ r                  =            2
+ gamma_set          =   0.50000000000000000        1.0000000000000000        2.0000000000000000        3.0000000000000000     
+ delta              =            5
+ delta_lr           =            5
+ best gamma         =   0.50000000000000000     
+ initial            = 49 99
+ refined            = 51 101
+
+wall time elapsed (s):     0.0242
+
+time elapsed (s)
+          xcv_dp_poly_make_data.py  xlocal_refine_poly_file.R  xsim_local_refine_poly_file.exe
+absolute                     0.239                      1.058                            0.204
+relative                     0.225                      1.000                            0.193
+
+Completed successfully.
+
+=== xcv_dpdu_regression (27/117) ===
+[1/3] Running xcv_dpdu_regression_make_data.py
+wrote xcv_dpdu_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xcv_dpdu_regression_file.R
+file = xcv_dpdu_regression_data.txt 
+n = 120 
+p = 3 
+lambda_set = 0.2 0.5 1 
+zeta_set = 10 20 30 
+lambda = 0.2 
+zeta = 10 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 14.198264439489
+train error = 20.271220591580
+lambda = 0.2 
+zeta = 20 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 14.198768589613
+train error = 20.270768628632
+lambda = 0.2 
+zeta = 30 
+estimated changepoints = 59 
+n changepoints = 1 
+test error = 105.832623362439
+train error = 68.223879828153
+lambda = 0.5 
+zeta = 10 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 23.769186524216
+train error = 28.306405471303
+lambda = 0.5 
+zeta = 20 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 23.769186524216
+train error = 28.306405471303
+lambda = 0.5 
+zeta = 30 
+estimated changepoints = 59 
+n changepoints = 1 
+test error = 112.551695884836
+train error = 74.070215341215
+lambda = 1 
+zeta = 10 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 56.060267725778
+train error = 51.710387236419
+lambda = 1 
+zeta = 20 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 56.060267725778
+train error = 51.710387236419
+lambda = 1 
+zeta = 30 
+estimated changepoints = 59 
+n changepoints = 1 
+test error = 136.064490807944
+train error = 94.957370742139
+best lambda = 0.2 
+best zeta = 10 
+best index = 1 1 
+best changepoints = 39 79 
+best test error = 14.198264439489
+elapsed seconds = 0.770
+
+[3/3] Running xsim_cv_dpdu_regression_file.exe
+ file               = xcv_dpdu_regression_data.txt
+ n                  =          120
+ p                  =            3
+ lambda_set         =   0.20000000000000001       0.50000000000000000        1.0000000000000000     
+ zeta_set           =           10          20          30
+ eps                =    1.0000000000000000E-003
+ lambda             =   0.20000000000000001     
+ zeta               =           10
+ estimated          = 39 79
+ n changepoints     =            2
+ test error         =    14.198264439488980     
+ train error        =    20.271220591579869     
+ lambda             =   0.20000000000000001     
+ zeta               =           20
+ estimated          = 39 79
+ n changepoints     =            2
+ test error         =    14.198768589612994     
+ train error        =    20.270768628631949     
+ lambda             =   0.20000000000000001     
+ zeta               =           30
+ estimated          = 59
+ n changepoints     =            1
+ test error         =    105.83262336243881     
+ train error        =    68.223879828153116     
+ lambda             =   0.50000000000000000     
+ zeta               =           10
+ estimated          = 39 79
+ n changepoints     =            2
+ test error         =    23.769186524216007     
+ train error        =    28.306405471303442     
+ lambda             =   0.50000000000000000     
+ zeta               =           20
+ estimated          = 39 79
+ n changepoints     =            2
+ test error         =    23.769186524216007     
+ train error        =    28.306405471303442     
+ lambda             =   0.50000000000000000     
+ zeta               =           30
+ estimated          = 59
+ n changepoints     =            1
+ test error         =    112.55169588483591     
+ train error        =    74.070215341215160     
+ lambda             =    1.0000000000000000     
+ zeta               =           10
+ estimated          = 39 79
+ n changepoints     =            2
+ test error         =    56.060267725777706     
+ train error        =    51.710387236418704     
+ lambda             =    1.0000000000000000     
+ zeta               =           20
+ estimated          = 39 79
+ n changepoints     =            2
+ test error         =    56.060267725777706     
+ train error        =    51.710387236418704     
+ lambda             =    1.0000000000000000     
+ zeta               =           30
+ estimated          = 59
+ n changepoints     =            1
+ test error         =    136.06449080794414     
+ train error        =    94.957370742139005     
+ best lambda        =   0.20000000000000001     
+ best zeta          =           10
+ best index         =            1           1
+ best changepoints  = 39 79
+ best test error    =    14.198264439488980     
+
+wall time elapsed (s):     0.0156
+
+time elapsed (s)
+          xcv_dpdu_regression_make_data.py  xcv_dpdu_regression_file.R  xsim_cv_dpdu_regression_file.exe
+absolute                             0.224                       0.980                             0.175
+relative                             0.229                       1.000                             0.178
+
+Completed successfully.
+
+=== xlocal_refine_dpdu_regression (28/117) ===
+[1/3] Running xdpdu_regression_make_data.py
+wrote xdpdu_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xlocal_refine_dpdu_regression_file.R
+file = xdpdu_regression_data.txt 
+n = 120 
+p = 3 
+lambda = 0.5 
+zeta = 20 
+w = 0.9 
+initial changepoints = 40 80 
+refined changepoints = 39 79 
+elapsed seconds = 0.780
+
+[3/3] Running xsim_local_refine_dpdu_regression_file.exe
+ file               = xdpdu_regression_data.txt
+ n                  =          120
+ p                  =            3
+ lambda             =   0.50000000000000000     
+ zeta               =           20
+ w                  =   0.90000000000000002     
+ initial            = 40 80
+ refined            = 39 79
+
+wall time elapsed (s):     0.0065
+
+time elapsed (s)
+          xdpdu_regression_make_data.py  xlocal_refine_dpdu_regression_file.R  xsim_local_refine_dpdu_regression_file.exe
+absolute                          0.185                                 0.989                                       0.176
+relative                          0.187                                 1.000                                       0.178
+
+Completed successfully.
+
+=== xdp_var1 (29/117) ===
+[1/3] Running xdp_var1_make_data.py
+wrote xdp_var1_data.txt with shape 121 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xdp_var1_file.R
+file = xdp_var1_data.txt 
+p = 2 
+n transitions = 120 
+gamma = 0.2 
+lambda = 0 
+delta = 5 
+estimated changepoints = 40 81 
+partition checksum = 2190.000000000000
+elapsed seconds = 0.900
+
+[3/3] Running xsim_dp_var1_file.exe
+ file               = xdp_var1_data.txt
+ p                  =            2
+ n transitions      =          120
+ gamma              =   0.20000000000000001     
+ lambda             =    0.0000000000000000     
+ delta              =            5
+ estimated          = 40 81
+ partition checksum =         2190
+
+wall time elapsed (s):     0.0338
+
+time elapsed (s)
+          xdp_var1_make_data.py  xdp_var1_file.R  xsim_dp_var1_file.exe
+absolute                  0.240            1.147                  0.213
+relative                  0.209            1.000                  0.186
+
+Completed successfully.
+
+=== xcv_dp_var1 (30/117) ===
+[1/3] Running xcv_dp_var1_make_data.py
+wrote xcv_dp_var1_data.txt with shape 121 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xcv_dp_var1_file.R
+file = xcv_dp_var1_data.txt 
+p = 2 
+n = 121 
+gamma_set = 0.01 0.05 0.1 
+lambda_set = 0 0.05 0.1 
+delta = 5 
+eps = 0.001
+gamma = 0.01 
+lambda = 0 
+estimated changepoints = 56 80 
+n changepoints = 2 
+test error = 1.211808852708
+train error = 1.306156083940
+gamma = 0.05 
+lambda = 0 
+estimated changepoints = 56 
+n changepoints = 1 
+test error = 1.284255692759
+train error = 1.350222594922
+gamma = 0.1 
+lambda = 0 
+estimated changepoints = 56 
+n changepoints = 1 
+test error = 1.284255692759
+train error = 1.350222594922
+gamma = 0.01 
+lambda = 0.05 
+estimated changepoints = 56 80 
+n changepoints = 2 
+test error = 1.192922715193
+train error = 1.336528569025
+gamma = 0.05 
+lambda = 0.05 
+estimated changepoints = 56 
+n changepoints = 1 
+test error = 1.242126816809
+train error = 1.380954102808
+gamma = 0.1 
+lambda = 0.05 
+estimated changepoints = 56 
+n changepoints = 1 
+test error = 1.242126816809
+train error = 1.380954102808
+gamma = 0.01 
+lambda = 0.1 
+estimated changepoints = 56 80 
+n changepoints = 2 
+test error = 1.213139965729
+train error = 1.399706156436
+gamma = 0.05 
+lambda = 0.1 
+estimated changepoints = 56 
+n changepoints = 1 
+test error = 1.229063200738
+train error = 1.440119986677
+gamma = 0.1 
+lambda = 0.1 
+estimated changepoints =  
+n changepoints = 0 
+test error = 1.211264601573
+train error = 1.521664253515
+best gamma = 0.01 
+best lambda = 0.05 
+best index = 1 2 
+best changepoints = 56 80 
+best test error = 1.192922715193
+elapsed seconds = 0.900
+
+[3/3] Running xsim_cv_dp_var1_file.exe
+ file               = xcv_dp_var1_data.txt
+ p                  =            2
+ n                  =          121
+ gamma_set          =    1.0000000000000000E-002   5.0000000000000003E-002  0.10000000000000001     
+ lambda_set         =    0.0000000000000000        5.0000000000000003E-002  0.10000000000000001     
+ delta              =            5
+ gamma              =    1.0000000000000000E-002
+ lambda             =    0.0000000000000000     
+ estimated          = 56 80
+ n changepoints     =            2
+ test error         =    1.2118088527081916     
+ train error        =    1.3061560839400836     
+ gamma              =    5.0000000000000003E-002
+ lambda             =    0.0000000000000000     
+ estimated          = 56
+ n changepoints     =            1
+ test error         =    1.2842556927585265     
+ train error        =    1.3502225949217963     
+ gamma              =   0.10000000000000001     
+ lambda             =    0.0000000000000000     
+ estimated          = 56
+ n changepoints     =            1
+ test error         =    1.2842556927585265     
+ train error        =    1.3502225949217963     
+ gamma              =    1.0000000000000000E-002
+ lambda             =    5.0000000000000003E-002
+ estimated          = 56 80
+ n changepoints     =            2
+ test error         =    1.1929227151928166     
+ train error        =    1.3365285690254058     
+ gamma              =    5.0000000000000003E-002
+ lambda             =    5.0000000000000003E-002
+ estimated          = 56
+ n changepoints     =            1
+ test error         =    1.2421268168091903     
+ train error        =    1.3809541028083123     
+ gamma              =   0.10000000000000001     
+ lambda             =    5.0000000000000003E-002
+ estimated          = 56
+ n changepoints     =            1
+ test error         =    1.2421268168091903     
+ train error        =    1.3809541028083123     
+ gamma              =    1.0000000000000000E-002
+ lambda             =   0.10000000000000001     
+ estimated          = 56 80
+ n changepoints     =            2
+ test error         =    1.2131399657288267     
+ train error        =    1.3997061564362627     
+ gamma              =    5.0000000000000003E-002
+ lambda             =   0.10000000000000001     
+ estimated          = 56
+ n changepoints     =            1
+ test error         =    1.2290632007378806     
+ train error        =    1.4401199866767165     
+ gamma              =   0.10000000000000001     
+ lambda             =   0.10000000000000001     
+ estimated          = 
+ n changepoints     =            0
+ test error         =    1.2112646015730704     
+ train error        =    1.5216642535148888     
+ best gamma         =    1.0000000000000000E-002
+ best lambda        =    5.0000000000000003E-002
+ best index         =            1           2
+ best changepoints  = 56 80
+ best test error    =    1.1929227151928166     
+
+wall time elapsed (s):     0.0291
+
+time elapsed (s)
+          xcv_dp_var1_make_data.py  xcv_dp_var1_file.R  xsim_cv_dp_var1_file.exe
+absolute                     0.209               1.143                     0.186
+relative                     0.183               1.000                     0.163
+
+Completed successfully.
+
+=== xlocal_refine_cv_var1 (31/117) ===
+[1/3] Running xcv_dp_var1_make_data.py
+wrote xcv_dp_var1_data.txt with shape 121 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xlocal_refine_cv_var1_file.R
+file = xcv_dp_var1_data.txt 
+p = 2 
+n = 121 
+gamma_set = 0.01 0.05 0.1 
+lambda_set = 0 0.05 0.1 
+zeta_set = 0.01 0.05 0.1 0.2 
+delta = 5 
+delta_local = 5 
+best gamma = 0.01 
+best lambda = 0.05 
+initial changepoints = 56 80 
+refined changepoints = 40 48 
+zeta = 0.05 
+elapsed seconds = 1.750
+
+[3/3] Running xsim_local_refine_cv_var1_file.exe
+ file               = xcv_dp_var1_data.txt
+ p                  =            2
+ n                  =          121
+ gamma_set          =    1.0000000000000000E-002   5.0000000000000003E-002  0.10000000000000001     
+ lambda_set         =    0.0000000000000000        5.0000000000000003E-002  0.10000000000000001     
+ zeta_set           =    1.0000000000000000E-002   5.0000000000000003E-002  0.10000000000000001       0.20000000000000001     
+ delta              =            5
+ delta_local        =            5
+ best gamma         =    1.0000000000000000E-002
+ best lambda        =    5.0000000000000003E-002
+ initial            = 56 80
+ refined            = 40 48
+ zeta               =    5.0000000000000003E-002
+
+wall time elapsed (s):     0.0661
+
+time elapsed (s)
+          xcv_dp_var1_make_data.py  xlocal_refine_cv_var1_file.R  xsim_local_refine_cv_var1_file.exe
+absolute                     0.210                         1.970                               0.246
+relative                     0.107                         1.000                               0.125
+
+Completed successfully.
+
+=== xci_regression (32/117) ===
+[1/3] Running xdpdu_regression_make_data.py
+wrote xdpdu_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xci_regression_file.R
+file = xdpdu_regression_data.txt 
+u_file = xci_regression_u.txt 
+n = 120 
+p = 3 
+lambda = 0.5 
+zeta = 20 
+w = 0.9 
+B = 200 
+M = 120 
+alpha_vec = 0.05 0.10 
+initial changepoints = 40 80 
+refined changepoints = 39 79 
+block_size = 3 
+lrv_hat = 2.436861802902 16.417010295592 
+kappa2_hat = 4.929232643041 3.892975880059 
+drift_hat = 0.757678935628 0.928196347193 
+alpha = 0.05 
+ci = 1 38 40 
+ci = 2 77 81 
+alpha = 0.10 
+ci = 1 38 40 
+ci = 2 78 81 
+elapsed seconds = 1.080
+
+[3/3] Running xsim_ci_regression_file.exe
+ file               = xdpdu_regression_data.txt
+ u_file             = xci_regression_u.txt
+ n                  =          120
+ p                  =            3
+ lambda             =   0.50000000000000000     
+ zeta               =           20
+ w                  =   0.90000000000000002     
+ B                  =          200
+ M                  =          120
+ alpha_vec          =    5.0000000000000003E-002  0.10000000000000001     
+ initial            = 40 80
+ refined            = 39 79
+ block_size         =            3
+ lrv_hat            =   2.4368618029024480E+00   1.6417010295591730E+01
+ kappa2_hat         =   4.9292326430405184E+00   3.8929758800586183E+00
+ drift_hat          =   7.5767893562764976E-01   9.2819634719278599E-01
+ alpha              =    5.0000000000000003E-002
+ ci                 =            1          38          40
+ ci                 =            2          77          81
+ alpha              =   0.10000000000000001     
+ ci                 =            1          38          40
+ ci                 =            2          78          81
+
+wall time elapsed (s):     0.0085
+
+time elapsed (s)
+          xdpdu_regression_make_data.py  xci_regression_file.R  xsim_ci_regression_file.exe
+absolute                          0.269                  1.321                        0.138
+relative                          0.204                  1.000                        0.105
+
+Completed successfully.
+
+=== xstrucchange_breakpoints (33/117) ===
+[1/3] Running xstrucchange_breakpoints_make_data.py
+wrote xstrucchange_breakpoints_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_breakpoints_file.R
+file = xstrucchange_breakpoints_data.txt 
+n = 120 
+p = 1 
+h = 20 
+max breaks = 4 
+best m = 2 
+estimated changepoints = 40 80 
+RSS = 108.628919771266 20.042257239591 3.969302295426 3.852374349783 3.796965841061 
+BIC = 342.961234257896 154.512338081537 -25.435495276196 -14.661099558658 -2.037110833509 
+elapsed seconds = 0.370
+
+[3/3] Running xsim_strucchange_breakpoints_file.exe
+ file               =xstrucchange_breakpoints_data.txt
+ n                  =         120
+ p                  =           1
+ h                  =          20
+ max breaks         =           4
+ best m             =           2
+ estimated          = 40 80
+ RSS                = 108.628919771248 20.042257239591 3.969302295426 3.852374349783 3.796965841060
+ BIC                = 342.961234257877 154.512338081538 -25.435495276197 -14.661099558665 -2.037110833524
+
+wall time elapsed (s):     0.0049
+
+time elapsed (s)
+          xstrucchange_breakpoints_make_data.py  xstrucchange_breakpoints_file.R  xsim_strucchange_breakpoints_file.exe
+absolute                                  0.280                            0.646                                  0.171
+relative                                  0.434                            1.000                                  0.265
+
+Completed successfully.
+
+=== xstrucchange_fstats (34/117) ===
+[1/3] Running xstrucchange_fstats_make_data.py
+wrote xstrucchange_fstats_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_fstats_file.R
+file = xstrucchange_fstats_data.txt 
+n = 120 
+p = 1 
+from = 0.2 
+to = 0.8 
+breakpoint = 40 
+max F = 487.762460825754
+min RSS = 21.240323678551
+Fstats checksum = 14543.121812495661
+elapsed seconds = 0.060
+
+[3/3] Running xsim_strucchange_fstats_file.exe
+ file               =xstrucchange_fstats_data.txt
+ n                  =         120
+ p                  =           1
+ from               =  0.20000000000000001     
+ to                 =  0.80000000000000004     
+ breakpoint         =          40
+ max F              =   487.76246082575437     
+ min RSS            =   21.240323678550965     
+ Fstats checksum    =   14543.121812495665     
+
+wall time elapsed (s):     0.0023
+
+time elapsed (s)
+          xstrucchange_fstats_make_data.py  xstrucchange_fstats_file.R  xsim_strucchange_fstats_file.exe
+absolute                             0.200                       0.269                             0.196
+relative                             0.742                       1.000                             0.730
+
+Completed successfully.
+
+=== xstrucchange_efp (35/117) ===
+[1/3] Running xstrucchange_efp_make_data.py
+wrote xstrucchange_efp_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_efp_file.R
+file = xstrucchange_efp_data.txt 
+n = 120 
+p = 1 
+type = OLS-CUSUM 
+argmax abs process = 80 
+max abs process = 2.514394424092
+process checksum = -0.000000000001
+elapsed seconds = 0.080
+
+[3/3] Running xsim_strucchange_efp_file.exe
+ file               =xstrucchange_efp_data.txt
+ n                  =         120
+ p                  =           1
+ type               =OLS-CUSUM
+ argmax abs process =          80
+ max abs process    =   2.5143944240921003     
+ process checksum   =  -1.1761686116009405E-012
+
+wall time elapsed (s):     0.0028
+
+time elapsed (s)
+          xstrucchange_efp_make_data.py  xstrucchange_efp_file.R  xsim_strucchange_efp_file.exe
+absolute                          0.226                    0.288                          0.185
+relative                          0.782                    1.000                          0.643
+
+Completed successfully.
+
+=== xstrucchange_rec_cusum (36/117) ===
+[1/3] Running xstrucchange_rec_cusum_make_data.py
+wrote xstrucchange_rec_cusum_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_rec_cusum_file.R
+file = xstrucchange_rec_cusum_data.txt 
+n = 120 
+p = 1 
+type = Rec-CUSUM 
+argmax abs process = 118 
+max abs process = 5.753765874721
+process checksum = -115.849253824595
+elapsed seconds = 0.060
+
+[3/3] Running xsim_strucchange_rec_cusum_file.exe
+ file               =xstrucchange_rec_cusum_data.txt
+ n                  =         120
+ p                  =           1
+ type               =Rec-CUSUM
+ argmax abs process =         118
+ max abs process    =   5.7537658747322435     
+ process checksum   =  -115.84925382486375     
+
+wall time elapsed (s):     0.0025
+
+time elapsed (s)
+          xstrucchange_rec_cusum_make_data.py  xstrucchange_rec_cusum_file.R  xsim_strucchange_rec_cusum_file.exe
+absolute                                0.255                          0.274                                0.183
+relative                                0.933                          1.000                                0.669
+
+Completed successfully.
+
+=== xstrucchange_ols_mosum (37/117) ===
+[1/3] Running xstrucchange_ols_mosum_make_data.py
+wrote xstrucchange_ols_mosum_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_ols_mosum_file.R
+file = xstrucchange_ols_mosum_data.txt 
+n = 120 
+p = 1 
+type = OLS-MOSUM 
+h = 0.25 
+argmax abs process = 40 
+max abs process = 4.007178191537
+process checksum = 57.102246296797
+elapsed seconds = 0.040
+
+[3/3] Running xsim_strucchange_ols_mosum_file.exe
+ file               =xstrucchange_ols_mosum_data.txt
+ n                  =         120
+ p                  =           1
+ type               =OLS-MOSUM
+ h                  =  0.25000000000000000     
+ argmax abs process =          40
+ max abs process    =   4.0071781915366298     
+ process checksum   =   57.102246296797389     
+
+wall time elapsed (s):     0.0021
+
+time elapsed (s)
+          xstrucchange_ols_mosum_make_data.py  xstrucchange_ols_mosum_file.R  xsim_strucchange_ols_mosum_file.exe
+absolute                                0.222                          0.240                                0.152
+relative                                0.924                          1.000                                0.631
+
+Completed successfully.
+
+=== xstrucchange_rec_mosum (38/117) ===
+[1/3] Running xstrucchange_rec_mosum_make_data.py
+wrote xstrucchange_rec_mosum_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_rec_mosum_file.R
+file = xstrucchange_rec_mosum_data.txt 
+n = 120 
+p = 1 
+type = Rec-MOSUM 
+h = 0.25 
+argmax abs process = 78 
+max abs process = 4.848436666367
+process checksum = -129.161229141465
+elapsed seconds = 0.040
+
+[3/3] Running xsim_strucchange_rec_mosum_file.exe
+ file               =xstrucchange_rec_mosum_data.txt
+ n                  =         120
+ p                  =           1
+ type               =Rec-MOSUM
+ h                  =  0.25000000000000000     
+ argmax abs process =          78
+ max abs process    =   4.8484366663723319     
+ process checksum   =  -129.16122914163120     
+
+wall time elapsed (s):     0.0022
+
+time elapsed (s)
+          xstrucchange_rec_mosum_make_data.py  xstrucchange_rec_mosum_file.R  xsim_strucchange_rec_mosum_file.exe
+absolute                                0.216                          0.264                                0.169
+relative                                0.818                          1.000                                0.642
+
+Completed successfully.
+
+=== xstrucchange_mefp (39/117) ===
+[1/3] Running xstrucchange_mefp_make_data.py
+wrote xstrucchange_mefp_data.txt with 120 rows and 2 columns
+history_n = 50
+true changepoints = [78]
+
+[2/3] Running xstrucchange_mefp_file.R
+file = xstrucchange_mefp_data.txt 
+n = 120 
+history n = 50 
+p = 1 
+type = mefp OLS-CUSUM 
+alpha = 0.05 
+critval = 2.795483471513
+breakpoint = 78 
+argmax abs process = 69 
+max abs process = 4.834847381733
+process checksum = -25.598217520634
+boundary checksum = 222.122055237545
+elapsed seconds = 0.080
+
+[3/3] Running xsim_strucchange_mefp_file.exe
+ file               =xstrucchange_mefp_data.txt
+ n                  =         120
+ history n          =          50
+ p                  =           1
+ type               =mefp OLS-CUSUM
+ alpha              =   5.0000000000000003E-002
+ critval            =   2.7954834829151096     
+ breakpoint         =          78
+ argmax abs process =          69
+ max abs process    =   4.8348473817325415     
+ process checksum   =  -25.598217520633337     
+ boundary checksum  =   222.12205605363596     
+
+wall time elapsed (s):     0.0027
+
+time elapsed (s)
+          xstrucchange_mefp_make_data.py  xstrucchange_mefp_file.R  xsim_strucchange_mefp_file.exe
+absolute                           0.225                     0.274                           0.158
+relative                           0.823                     1.000                           0.578
+
+Completed successfully.
+
+=== xstrucchange_mefp_ols_mosum (40/117) ===
+[1/3] Running xstrucchange_mefp_ols_mosum_make_data.py
+wrote xstrucchange_mefp_ols_mosum_data.txt with 120 rows and 2 columns
+history_n = 50
+true changepoints = [78]
+
+[2/3] Running xstrucchange_mefp_ols_mosum_file.R
+file = xstrucchange_mefp_ols_mosum_data.txt 
+n = 120 
+history n = 50 
+p = 1 
+type = mefp OLS-MOSUM 
+alpha = 0.05 
+h = 0.25 
+critval = 1.341824510076
+breakpoint = 85 
+argmax abs process = 69 
+max abs process = 5.264500217615
+process checksum = -28.776193981848
+boundary checksum = 132.833849433216
+elapsed seconds = 0.040
+
+[3/3] Running xsim_strucchange_mefp_ols_mosum_file.exe
+ file               =xstrucchange_mefp_ols_mosum_data.txt
+ n                  =         120
+ history n          =          50
+ p                  =           1
+ type               =mefp OLS-MOSUM
+ alpha              =   5.0000000000000003E-002
+ h                  =  0.25000000000000000     
+ critval            =   1.3418245100762800     
+ breakpoint         =          85
+ argmax abs process =          69
+ max abs process    =   5.2645002176148514     
+ process checksum   =  -28.776193981847900     
+ boundary checksum  =   132.83384943321559     
+
+wall time elapsed (s):     0.0026
+
+time elapsed (s)
+          xstrucchange_mefp_ols_mosum_make_data.py  xstrucchange_mefp_ols_mosum_file.R  xsim_strucchange_mefp_ols_mosum_file.exe
+absolute                                     0.251                               0.258                                     0.185
+relative                                     0.971                               1.000                                     0.715
+
+Completed successfully.
+
+=== xstrucchange_re (41/117) ===
+[1/3] Running xstrucchange_re_make_data.py
+wrote xstrucchange_re_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_re_file.R
+file = xstrucchange_re_data.txt 
+n = 120 
+p = 1 
+type = RE 
+nrow process = 120 
+ncol process = 2 
+imax row = 80 
+imax col = 2 
+max abs process = 5.591442155589
+process checksum = 401.100560077891
+elapsed seconds = 0.060
+
+[3/3] Running xsim_strucchange_re_file.exe
+ file               =xstrucchange_re_data.txt
+ n                  =         120
+ p                  =           1
+ type               =RE
+ nrow process       =         120
+ ncol process       =           2
+ imax row           =          80
+ imax col           =           2
+ max abs process    =   5.5914421555886111     
+ process checksum   =   401.10056007789188     
+
+wall time elapsed (s):     0.0032
+
+time elapsed (s)
+          xstrucchange_re_make_data.py  xstrucchange_re_file.R  xsim_strucchange_re_file.exe
+absolute                         0.212                   0.236                         0.185
+relative                         0.901                   1.000                         0.783
+
+Completed successfully.
+
+=== xstrucchange_mefp_re (42/117) ===
+[1/3] Running xstrucchange_mefp_re_make_data.py
+wrote xstrucchange_mefp_re_data.txt with 120 rows and 2 columns
+history_n = 50
+true changepoints = [78]
+
+[2/3] Running xstrucchange_mefp_re_file.R
+file = xstrucchange_mefp_re_data.txt 
+n = 120 
+history n = 50 
+p = 1 
+type = mefp RE 
+alpha = 0.05 
+critval = 3.057515896406
+breakpoint = 51 
+nrow process = 70 
+ncol process = 2 
+statistic checksum = 927.637592380988
+statistic max = 25.050060450874
+boundary checksum = 240.955631995432
+elapsed seconds = 0.080
+
+[3/3] Running xsim_strucchange_mefp_re_file.exe
+ file               =xstrucchange_mefp_re_data.txt
+ n                  =         120
+ history n          =          50
+ p                  =           1
+ type               =mefp RE
+ alpha              =   5.0000000000000003E-002
+ critval            =   3.0575159205629951     
+ breakpoint         =          51
+ nrow process       =          70
+ ncol process       =           2
+ statistic checksum =   927.63759238098385     
+ statistic max      =   25.050060450874454     
+ boundary checksum  =   240.95563373844035     
+
+wall time elapsed (s):     0.0023
+
+time elapsed (s)
+          xstrucchange_mefp_re_make_data.py  xstrucchange_mefp_re_file.R  xsim_strucchange_mefp_re_file.exe
+absolute                              0.242                        0.260                              0.181
+relative                              0.930                        1.000                              0.695
+
+Completed successfully.
+
+=== xstrucchange_me (43/117) ===
+[1/3] Running xstrucchange_me_make_data.py
+wrote xstrucchange_me_data.txt with 120 rows and 2 columns
+true changepoints = [40, 80]
+
+[2/3] Running xstrucchange_me_file.R
+file = xstrucchange_me_data.txt 
+n = 120 
+p = 1 
+type = ME 
+h = 0.25 
+nrow process = 91 
+ncol process = 2 
+imax row = 41 
+imax col = 1 
+max abs process = 3.969489190219
+process checksum = 85.192220387348
+elapsed seconds = 0.040
+
+[3/3] Running xsim_strucchange_me_file.exe
+ file               =xstrucchange_me_data.txt
+ n                  =         120
+ p                  =           1
+ type               =ME
+ h                  =  0.25000000000000000     
+ nrow process       =          91
+ ncol process       =           2
+ imax row           =          41
+ imax col           =           1
+ max abs process    =   3.9694891902188281     
+ process checksum   =   85.192220387347660     
+
+wall time elapsed (s):     0.0036
+
+time elapsed (s)
+          xstrucchange_me_make_data.py  xstrucchange_me_file.R  xsim_strucchange_me_file.exe
+absolute                         0.255                   0.290                         0.186
+relative                         0.878                   1.000                         0.641
+
+Completed successfully.
+
+=== xstrucchange_mefp_me (44/117) ===
+[1/3] Running xstrucchange_mefp_me_make_data.py
+wrote xstrucchange_mefp_me_data.txt with 120 rows and 2 columns
+history_n = 50
+true changepoints = [78]
+
+[2/3] Running xstrucchange_mefp_me_file.R
+file = xstrucchange_mefp_me_data.txt 
+n = 120 
+history n = 50 
+p = 1 
+type = mefp ME 
+alpha = 0.05 
+h = 0.25 
+critval = 1.423818619523
+breakpoint = 81 
+nrow process = 70 
+ncol process = 2 
+statistic checksum = 214.367045450312
+statistic max = 4.732536872822
+boundary checksum = 140.950852146223
+elapsed seconds = 0.090
+
+[3/3] Running xsim_strucchange_mefp_me_file.exe
+ file               =xstrucchange_mefp_me_data.txt
+ n                  =         120
+ history n          =          50
+ p                  =           1
+ type               =mefp ME
+ alpha              =   5.0000000000000003E-002
+ h                  =  0.25000000000000000     
+ critval            =   1.4238186195231000     
+ breakpoint         =          81
+ nrow process       =          70
+ ncol process       =           2
+ statistic checksum =   214.36704545031128     
+ statistic max      =   4.7325368728219477     
+ boundary checksum  =   140.95085214622333     
+
+wall time elapsed (s):     0.0042
+
+time elapsed (s)
+          xstrucchange_mefp_me_make_data.py  xstrucchange_mefp_me_file.R  xsim_strucchange_mefp_me_file.exe
+absolute                              0.257                        0.289                              0.198
+relative                              0.889                        1.000                              0.687
+
+Completed successfully.
+
+=== xcpm_student (45/117) ===
+[1/3] Running xcpm_student_make_data.py
+wrote xcpm_student_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_student_file.R
+file = xcpm_student_data.txt 
+n = 180 
+type = Student
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 59 
+detect detectionTime = 61 
+detect Ds checksum = 104.407225913020
+process changePoints = 59 120 
+process detectionTimes = 61 122 
+batch changePoint = 120 
+batch threshold = 3.151322125143
+batch Ds checksum = 794.945712436625
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_student_file.exe
+ file               = xcpm_student_data.txt
+ n                  =          180
+ type               = Student
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           59
+ detect detectionTime =           61
+ detect Ds checksum =    104.40722591301991     
+ process changePoints = 59 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 61 122                                                                                                                                                                                                                                                          
+ batch changePoint  =          120
+ batch threshold    =    3.1513221251433099     
+ batch Ds checksum  =    794.94571243662415     
+
+wall time elapsed (s):     0.0162
+
+time elapsed (s)
+          xcpm_student_make_data.py  xcpm_student_file.R  xsim_cpm_student_file.exe
+absolute                      0.225                0.366                      0.170
+relative                      0.614                1.000                      0.463
+
+Completed successfully.
+
+=== xcpm_bartlett (46/117) ===
+[1/3] Running xcpm_bartlett_make_data.py
+wrote xcpm_bartlett_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_bartlett_file.R
+file = xcpm_bartlett_data.txt 
+n = 180 
+type = Bartlett
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 64 
+detect Ds checksum = 207.681242608680
+process changePoints = 60 115 
+process detectionTimes = 64 126 
+batch changePoint = 60 
+batch threshold = 9.764794865448
+batch Ds checksum = 3365.541765136165
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_bartlett_file.exe
+ file               = xcpm_bartlett_data.txt
+ n                  =          180
+ type               = Bartlett
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           64
+ detect Ds checksum =    207.68124260868001     
+ process changePoints = 60 115                                                                                                                                                                                                                                                          
+ process detectionTimes = 64 126                                                                                                                                                                                                                                                          
+ batch changePoint  =           60
+ batch threshold    =    9.7647948654478292     
+ batch Ds checksum  =    3365.5417651361631     
+
+wall time elapsed (s):     0.0181
+
+time elapsed (s)
+          xcpm_bartlett_make_data.py  xcpm_bartlett_file.R  xsim_cpm_bartlett_file.exe
+absolute                       0.255                 0.273                       0.168
+relative                       0.932                 1.000                       0.613
+
+Completed successfully.
+
+=== xcpm_joint (47/117) ===
+[1/3] Running xcpm_joint_make_data.py
+wrote xcpm_joint_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_joint_file.R
+file = xcpm_joint_data.txt 
+n = 180 
+type = Joint
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 63 
+detect Ds checksum = 244.944975716956
+process changePoints = 60 120 
+process detectionTimes = 63 123 
+batch changePoint = 120 
+batch threshold = 13.116716776180
+batch Ds checksum = 9863.885377312516
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_joint_file.exe
+ file               = xcpm_joint_data.txt
+ n                  =          180
+ type               = Joint
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           63
+ detect Ds checksum =    244.94497571695618     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 63 123                                                                                                                                                                                                                                                          
+ batch changePoint  =          120
+ batch threshold    =    13.116716776179800     
+ batch Ds checksum  =    9863.8853773125120     
+
+wall time elapsed (s):     0.0264
+
+time elapsed (s)
+          xcpm_joint_make_data.py  xcpm_joint_file.R  xsim_cpm_joint_file.exe
+absolute                    0.241              0.266                    0.205
+relative                    0.907              1.000                    0.773
+
+Completed successfully.
+
+=== xcpm_joint_adjusted (48/117) ===
+[1/3] Running xcpm_joint_adjusted_make_data.py
+wrote xcpm_joint_adjusted_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_joint_adjusted_file.R
+file = xcpm_joint_adjusted_data.txt 
+n = 180 
+type = JointAdjusted
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 63 
+detect Ds checksum = 238.049005199019
+process changePoints = 60 120 
+process detectionTimes = 63 123 
+batch changePoint = 120 
+batch threshold = 12.970342081321
+batch Ds checksum = 9861.221721996182
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_joint_adjusted_file.exe
+ file               = xcpm_joint_adjusted_data.txt
+ n                  =          180
+ type               = JointAdjusted
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           63
+ detect Ds checksum =    238.04900519240780     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 63 123                                                                                                                                                                                                                                                          
+ batch changePoint  =          120
+ batch threshold    =    12.970342081321199     
+ batch Ds checksum  =    9861.2217244841358     
+
+wall time elapsed (s):     0.0161
+
+time elapsed (s)
+          xcpm_joint_adjusted_make_data.py  xcpm_joint_adjusted_file.R  xsim_cpm_joint_adjusted_file.exe
+absolute                             0.241                       0.240                             0.185
+relative                             1.003                       1.000                             0.770
+
+Completed successfully.
+
+=== xcpm_joint_hawkins (49/117) ===
+[1/3] Running xcpm_joint_hawkins_make_data.py
+wrote xcpm_joint_hawkins_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_joint_hawkins_file.R
+file = xcpm_joint_hawkins_data.txt 
+n = 180 
+type = JointHawkins
+ARL0 = 500 
+startup = 20 
+alpha = NA
+detect changePoint = 60 
+detect detectionTime = 63 
+detect Ds checksum = 238.280122103731
+batch changePoint = 120 
+batch threshold = -1.000000000000
+batch Ds checksum = 9862.074325264384
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_joint_hawkins_file.exe
+ file               = xcpm_joint_hawkins_data.txt
+ n                  =          180
+ type               = JointHawkins
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              = NA
+ detect changePoint =           60
+ detect detectionTime =           63
+ detect Ds checksum =    238.28012210373112     
+ batch changePoint  =          120
+ batch threshold    =   -1.0000000000000000     
+ batch Ds checksum  =    9862.0743252643806     
+
+wall time elapsed (s):     0.0132
+
+time elapsed (s)
+          xcpm_joint_hawkins_make_data.py  xcpm_joint_hawkins_file.R  xsim_cpm_joint_hawkins_file.exe
+absolute                            0.224                      0.224                            0.169
+relative                            0.999                      1.000                            0.751
+
+Completed successfully.
+
+=== xcpm_exponential (50/117) ===
+[1/3] Running xcpm_exponential_make_data.py
+wrote xcpm_exponential_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_exponential_file.R
+file = xcpm_exponential_data.txt 
+n = 180 
+type = Exponential
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 74 
+detect Ds checksum = 195.260403333550
+process changePoints = 60 120 
+process detectionTimes = 74 140 
+batch changePoint = 60 
+batch threshold = 10.156607103133
+batch Ds checksum = 926.850855485136
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_exponential_file.exe
+ file               = xcpm_exponential_data.txt
+ n                  =          180
+ type               = Exponential
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           74
+ detect Ds checksum =    195.26040333355047     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 74 140                                                                                                                                                                                                                                                          
+ batch changePoint  =           60
+ batch threshold    =    10.156607103133000     
+ batch Ds checksum  =    926.85085548513621     
+
+wall time elapsed (s):     0.0248
+
+time elapsed (s)
+          xcpm_exponential_make_data.py  xcpm_exponential_file.R  xsim_cpm_exponential_file.exe
+absolute                          0.200                    0.233                          0.154
+relative                          0.856                    1.000                          0.660
+
+Completed successfully.
+
+=== xcpm_exponential_adjusted (51/117) ===
+[1/3] Running xcpm_exponential_adjusted_make_data.py
+wrote xcpm_exponential_adjusted_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_exponential_adjusted_file.R
+file = xcpm_exponential_adjusted_data.txt 
+n = 180 
+type = ExponentialAdjusted
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 74 
+detect Ds checksum = 89.253177344971
+process changePoints = 60 120 
+process detectionTimes = 74 138 
+batch changePoint = 60 
+batch threshold = 4.829254045755
+batch Ds checksum = 458.717264739547
+elapsed seconds = 0.020
+
+[3/3] Running xsim_cpm_exponential_adjusted_file.exe
+ file               = xcpm_exponential_adjusted_data.txt
+ n                  =          180
+ type               = ExponentialAdjusted
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           74
+ detect Ds checksum =    89.253177309203821     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 74 138                                                                                                                                                                                                                                                          
+ batch changePoint  =           60
+ batch threshold    =    4.8292540457548503     
+ batch Ds checksum  =    458.71726171111908     
+
+wall time elapsed (s):     0.0162
+
+time elapsed (s)
+          xcpm_exponential_adjusted_make_data.py  xcpm_exponential_adjusted_file.R  xsim_cpm_exponential_adjusted_file.exe
+absolute                                   0.224                             0.211                                   0.199
+relative                                   1.062                             1.000                                   0.944
+
+Completed successfully.
+
+=== xcpm_poisson (52/117) ===
+[1/3] Running xcpm_poisson_make_data.py
+wrote xcpm_poisson_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_poisson_file.R
+file = xcpm_poisson_data.txt 
+n = 180 
+type = Poisson
+ARL0 = NA
+startup = 20 
+alpha = NA
+detect changePoint = 0 
+detect detectionTime = 0 
+detect Ds checksum = 1275.651393604802
+process changePoints =  
+process detectionTimes =  
+batch changePoint = 60 
+batch threshold = -1.000000000000
+batch Ds checksum = 681.893187866767
+elapsed seconds = 0.030
+
+[3/3] Running xsim_cpm_poisson_file.exe
+ file               = xcpm_poisson_data.txt
+ n                  =          180
+ type               = Poisson
+ ARL0               = NA
+ startup            =           20
+ alpha              = NA
+ detect changePoint =            0
+ detect detectionTime =            0
+ detect Ds checksum =    1275.6513936048020     
+ process changePoints =                                                                                                                                                                                                                                                                 
+ process detectionTimes =                                                                                                                                                                                                                                                                 
+ batch changePoint  =           60
+ batch threshold    =   -1.0000000000000000     
+ batch Ds checksum  =    681.89318786676711     
+
+wall time elapsed (s):     0.0059
+
+time elapsed (s)
+          xcpm_poisson_make_data.py  xcpm_poisson_file.R  xsim_cpm_poisson_file.exe
+absolute                      0.233                0.219                      0.168
+relative                      1.064                1.000                      0.764
+
+Completed successfully.
+
+=== xcpm_mw (53/117) ===
+[1/3] Running xcpm_mw_make_data.py
+wrote xcpm_mw_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_mw_file.R
+file = xcpm_mw_data.txt 
+n = 180 
+type = MW
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 63 
+detect detectionTime = 74 
+detect Ds checksum = 116.801839138315
+process changePoints = 63 120 
+process detectionTimes = 74 126 
+batch changePoint = 124 
+batch threshold = 3.026372139064
+batch Ds checksum = 527.119165157491
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_mw_file.exe
+ file               = xcpm_mw_data.txt
+ n                  =          180
+ type               = MW
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           63
+ detect detectionTime =           74
+ detect Ds checksum =    116.80183913831502     
+ process changePoints = 63 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 74 126                                                                                                                                                                                                                                                          
+ batch changePoint  =          124
+ batch threshold    =    3.0263721390644598     
+ batch Ds checksum  =    527.11916515749090     
+
+wall time elapsed (s):     0.0132
+
+time elapsed (s)
+          xcpm_mw_make_data.py  xcpm_mw_file.R  xsim_cpm_mw_file.exe
+absolute                 0.224           0.224                 0.184
+relative                 0.999           1.000                 0.821
+
+Completed successfully.
+
+=== xcpm_mood (54/117) ===
+[1/3] Running xcpm_mood_make_data.py
+wrote xcpm_mood_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_mood_file.R
+file = xcpm_mood_data.txt 
+n = 180 
+type = Mood
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 67 
+detect Ds checksum = 95.273806659908
+process changePoints = 60 120 
+process detectionTimes = 67 135 
+batch changePoint = 60 
+batch threshold = 3.066717395665
+batch Ds checksum = 364.726145179096
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_mood_file.exe
+ file               = xcpm_mood_data.txt
+ n                  =          180
+ type               = Mood
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           67
+ detect Ds checksum =    95.273806659907891     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 67 135                                                                                                                                                                                                                                                          
+ batch changePoint  =           60
+ batch threshold    =    3.0667173956645399     
+ batch Ds checksum  =    364.72614517909625     
+
+wall time elapsed (s):     0.0307
+
+time elapsed (s)
+          xcpm_mood_make_data.py  xcpm_mood_file.R  xsim_cpm_mood_file.exe
+absolute                   0.241             0.227                   0.163
+relative                   1.062             1.000                   0.716
+
+Completed successfully.
+
+=== xcpm_lepage (55/117) ===
+[1/3] Running xcpm_lepage_make_data.py
+wrote xcpm_lepage_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_lepage_file.R
+file = xcpm_lepage_data.txt 
+n = 180 
+type = LP
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 63 
+detect Ds checksum = 212.138518352562
+process changePoints = 60 120 
+process detectionTimes = 63 123 
+batch changePoint = 120 
+batch threshold = 12.940992005023
+batch Ds checksum = 6402.847769321666
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_lepage_file.exe
+ file               = xcpm_lepage_data.txt
+ n                  =          180
+ type               = LP
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           63
+ detect Ds checksum =    212.13851835256216     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 63 123                                                                                                                                                                                                                                                          
+ batch changePoint  =          120
+ batch threshold    =    12.940992005023499     
+ batch Ds checksum  =    6402.8477693216664     
+
+wall time elapsed (s):     0.0327
+
+time elapsed (s)
+          xcpm_lepage_make_data.py  xcpm_lepage_file.R  xsim_cpm_lepage_file.exe
+absolute                     0.234               0.264                     0.198
+relative                     0.883               1.000                     0.748
+
+Completed successfully.
+
+=== xcpm_fet (56/117) ===
+[1/3] Running xcpm_fet_make_data.py
+wrote xcpm_fet_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_fet_file.R
+file = xcpm_fet_data.txt 
+n = 180 
+type = FET
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+lambda = 0.3 
+detect changePoint = 54 
+detect detectionTime = 69 
+detect Ds checksum = 46.094325321300
+process changePoints = 54 81 
+process detectionTimes = 69 89 
+batch changePoint = 54 
+batch threshold = 0.987098468710
+batch Ds checksum = 115.449443028857
+elapsed seconds = 0.020
+
+[3/3] Running xsim_cpm_fet_file.exe
+ file               = xcpm_fet_data.txt
+ n                  =          180
+ type               = FET
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ lambda             =   0.29999999999999999     
+ detect changePoint =           54
+ detect detectionTime =           69
+ detect Ds checksum =    46.094325321299685     
+ process changePoints = 54 81                                                                                                                                                                                                                                                           
+ process detectionTimes = 69 89                                                                                                                                                                                                                                                           
+ batch changePoint  =           54
+ batch threshold    =   0.98709846871025297     
+ batch Ds checksum  =    115.44944302883971     
+
+wall time elapsed (s):     0.0204
+
+time elapsed (s)
+          xcpm_fet_make_data.py  xcpm_fet_file.R  xsim_cpm_fet_file.exe
+absolute                  0.240            0.257                  0.165
+relative                  0.934            1.000                  0.642
+
+Completed successfully.
+
+=== xcpm_ks (57/117) ===
+[1/3] Running xcpm_ks_make_data.py
+wrote xcpm_ks_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_ks_file.R
+file = xcpm_ks_data.txt 
+n = 180 
+type = KS
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 66 
+detect Ds checksum = 41.071608613099
+process changePoints = 60 120 
+process detectionTimes = 66 125 
+batch changePoint = 120 
+batch threshold = 0.997800695718
+batch Ds checksum = 163.674827478295
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_ks_file.exe
+ file               = xcpm_ks_data.txt
+ n                  =          180
+ type               = KS
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           67
+ detect Ds checksum =    41.933885248787135     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 67 124                                                                                                                                                                                                                                                          
+ batch changePoint  =          120
+ batch threshold    =   0.99780069571842100     
+ batch Ds checksum  =    164.90037715658175     
+
+wall time elapsed (s):     0.0181
+
+time elapsed (s)
+          xcpm_ks_make_data.py  xcpm_ks_file.R  xsim_cpm_ks_file.exe
+absolute                 0.271           0.242                 0.166
+relative                 1.119           1.000                 0.686
+
+Completed successfully.
+
+=== xcpm_cvm (58/117) ===
+[1/3] Running xcpm_cvm_make_data.py
+wrote xcpm_cvm_data.txt with 180 rows
+true changepoints = [60, 120]
+
+[2/3] Running xcpm_cvm_file.R
+file = xcpm_cvm_data.txt 
+n = 180 
+type = CVM
+ARL0 = 500 
+startup = 20 
+alpha = 0.05 
+detect changePoint = 60 
+detect detectionTime = 66 
+detect Ds checksum = 77.816357189670
+process changePoints = 60 120 
+process detectionTimes = 66 124 
+batch changePoint = 120 
+batch threshold = 5.710718337758
+batch Ds checksum = 2432.471773567926
+elapsed seconds = 0.000
+
+[3/3] Running xsim_cpm_cvm_file.exe
+ file               = xcpm_cvm_data.txt
+ n                  =          180
+ type               = CVM
+ ARL0               =    500.00000000000000     
+ startup            =           20
+ alpha              =    5.0000000000000003E-002
+ detect changePoint =           60
+ detect detectionTime =           66
+ detect Ds checksum =    77.816357189670128     
+ process changePoints = 60 120                                                                                                                                                                                                                                                          
+ process detectionTimes = 66 124                                                                                                                                                                                                                                                          
+ batch changePoint  =          120
+ batch threshold    =    5.7107183377577400     
+ batch Ds checksum  =    2432.4717735679264     
+
+wall time elapsed (s):     0.0341
+
+time elapsed (s)
+          xcpm_cvm_make_data.py  xcpm_cvm_file.R  xsim_cpm_cvm_file.exe
+absolute                  0.209            0.257                  0.198
+relative                  0.816            1.000                  0.771
+
+Completed successfully.
+
+=== xecp_edivisive (59/117) ===
+[1/3] Running xecp_edivisive_make_data.py
+wrote xecp_edivisive_data.txt with shape 120 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xecp_edivisive_file.R
+file = xecp_edivisive_data.txt 
+n = 120 
+p = 2 
+k = 2 
+min.size = 10 
+alpha = 1 
+k.hat = 3 
+estimates = 1 41 81 121 
+order.found = 1 121 41 81 
+cluster checksum = 240.000000000000
+elapsed seconds = 0.250
+
+[3/3] Running xsim_ecp_edivisive_file.exe
+ file               = xecp_edivisive_data.txt
+ n                  =          120
+ p                  =            2
+ k                  =            2
+ min.size           =           10
+ alpha              =    1.0000000000000000     
+ k.hat              =            3
+ estimates          = 1 41 81 121                                                                                                                                                                                                                                                     
+ cluster checksum   =    240.00000000000000     
+
+wall time elapsed (s):     0.0031
+
+time elapsed (s)
+          xecp_edivisive_make_data.py  xecp_edivisive_file.R  xsim_ecp_edivisive_file.exe
+absolute                        0.242                  0.464                        0.150
+relative                        0.521                  1.000                        0.322
+
+Completed successfully.
+
+=== xecp_edivisive_full (60/117) ===
+[1/3] Running xecp_edivisive_full_make_data.py
+wrote xecp_edivisive_full_data.txt with shape 120 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xecp_edivisive_full_file.R
+file = xecp_edivisive_full_data.txt 
+perm_file = xecp_edivisive_full_perms.txt 
+n = 120 
+p = 2 
+sig.lvl = 0.1 
+R = 19 
+min.size = 10 
+alpha = 1 
+k.hat = 3 
+estimates = 1 41 81 121 
+order.found = 1 121 41 81 
+considered.last = 108 
+p.values = 0.050000000000 0.050000000000 0.550000000000 
+permutations = 19 19 19 
+cluster checksum = 240.000000000000
+
+[3/3] Running xsim_ecp_edivisive_full_file.exe
+ file               = xecp_edivisive_full_data.txt
+ perm_file          = xecp_edivisive_full_perms.txt
+ n                  =          120
+ p                  =            2
+ sig.lvl            =   0.10000000000000001     
+ R                  =           19
+ min.size           =           10
+ alpha              =    1.0000000000000000     
+ k.hat              =            3
+ estimates          = 1 41 81 121                                                                                                                                                                                                                                                     
+ order.found        = 1 121 41 81                                                                                                                                                                                                                                                     
+ considered.last    =          108
+ p.values           = .050000000000 .050000000000 .550000000000                                                                                                                                                                                                                       
+ permutations       = 19 19 19                                                                                                                                                                                                                                                        
+ cluster checksum   =    240.00000000000000     
+
+wall time elapsed (s):     0.0183
+
+time elapsed (s)
+          xecp_edivisive_full_make_data.py  xecp_edivisive_full_file.R  xsim_ecp_edivisive_full_file.exe
+absolute                             0.271                       0.354                             0.210
+relative                             0.768                       1.000                             0.595
+
+Completed successfully.
+
+=== xecp_eagglo (61/117) ===
+[1/3] Running xecp_eagglo_make_data.py
+wrote xecp_eagglo_data.txt with shape 120 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xecp_eagglo_file.R
+file = xecp_eagglo_data.txt 
+n = 120 
+p = 2 
+alpha = 1 
+estimates = 1 41 81 121 
+cluster checksum = 240.000000000000
+fit length = 120 
+fit checksum = 90723.870263573292
+progression dim = 120 121 
+progression checksum = 445002.000000000000
+merged checksum = -239.000000000000
+elapsed seconds = 0.280
+
+[3/3] Running xsim_ecp_eagglo_file.exe
+ file               = xecp_eagglo_data.txt
+ n                  =          120
+ p                  =            2
+ alpha              =    1.0000000000000000     
+ estimates          = 1 41 81 121                                                                                                                                                                                                                                                     
+ cluster checksum   =    240.00000000000000     
+ fit length         =          120
+ fit checksum       =    90723.870263573292     
+ progression dim    =          120         121
+ progression checksum =    445002.00000000000     
+ merged checksum    =   -239.00000000000000     
+
+wall time elapsed (s):     0.0026
+
+time elapsed (s)
+          xecp_eagglo_make_data.py  xecp_eagglo_file.R  xsim_ecp_eagglo_file.exe
+absolute                     0.225               0.480                     0.167
+relative                     0.468               1.000                     0.347
+
+Completed successfully.
+
+=== xecp_cp3o (62/117) ===
+[1/3] Running xecp_cp3o_make_data.py
+wrote xecp_cp3o_data.txt with shape 120 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xecp_cp3o_file.R
+file = xecp_cp3o_data.txt 
+n = 120 
+p = 2 
+K = 3 
+minsize = 10 
+alpha = 1 
+number = 2 
+estimates = 41 81 
+gof length = 3 
+gof checksum = 9.592192630019
+cpLoc checksum = 436.000000000000
+cpLoc lengths = 1 2 3 
+cpLoc 1 = 81 
+cpLoc 2 = 41 81 
+cpLoc 3 = 41 81 111 
+elapsed seconds = 5.650
+
+[3/3] Running xsim_ecp_cp3o_file.exe
+ file               = xecp_cp3o_data.txt
+ n                  =          120
+ p                  =            2
+ K                  =            3
+ minsize            =           10
+ alpha              =    1.0000000000000000     
+ number             =            2
+ estimates          = 41 81                                                                                                                                                                                                                                                           
+ gof length         =            3
+ gof checksum       =    9.5921926300194862     
+ cpLoc checksum     =    436.00000000000000     
+ cpLoc lengths      = 1 2 3                                                                                                                                                                                                                                                           
+ cpLoc            1  = 81                                                                                                                                                                                                                                                              
+ cpLoc            2  = 41 81                                                                                                                                                                                                                                                           
+ cpLoc            3  = 41 81 111                                                                                                                                                                                                                                                       
+
+wall time elapsed (s):     0.0154
+
+time elapsed (s)
+          xecp_cp3o_make_data.py  xecp_cp3o_file.R  xsim_ecp_cp3o_file.exe
+absolute                   0.231             5.892                   0.179
+relative                   0.039             1.000                   0.030
+
+Completed successfully.
+
+=== xecp_cp3o_delta (63/117) ===
+[1/3] Running xecp_cp3o_delta_make_data.py
+wrote xecp_cp3o_delta_data.txt with shape 120 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xecp_cp3o_delta_file.R
+file = xecp_cp3o_delta_data.txt 
+n = 120 
+p = 2 
+K = 3 
+delta = 9 
+alpha = 1 
+number = 2 
+estimates = 41 81 
+gof length = 3 
+gof checksum = 12.076441845354
+cpLoc checksum = 431.000000000000
+cpLoc lengths = 1 2 3 
+cpLoc 1 = 81 
+cpLoc 2 = 41 81 
+cpLoc 3 = 41 81 106 
+elapsed seconds = 0.060
+
+[3/3] Running xsim_ecp_cp3o_delta_file.exe
+ file               = xecp_cp3o_delta_data.txt
+ n                  =          120
+ p                  =            2
+ K                  =            3
+ delta              =            9
+ alpha              =    1.0000000000000000     
+ number             =            2
+ estimates          = 41 81                                                                                                                                                                                                                                                           
+ gof length         =            3
+ gof checksum       =    12.076441845353918     
+ cpLoc checksum     =    431.00000000000000     
+ cpLoc lengths      = 1 2 3                                                                                                                                                                                                                                                           
+ cpLoc            1  = 81                                                                                                                                                                                                                                                              
+ cpLoc            2  = 41 81                                                                                                                                                                                                                                                           
+ cpLoc            3  = 41 81 106                                                                                                                                                                                                                                                       
+
+wall time elapsed (s):     0.0153
+
+time elapsed (s)
+          xecp_cp3o_delta_make_data.py  xecp_cp3o_delta_file.R  xsim_ecp_cp3o_delta_file.exe
+absolute                         0.226                   0.317                         0.201
+relative                         0.712                   1.000                         0.633
+
+Completed successfully.
+
+=== xcv_dp_regression (64/117) ===
+[1/3] Running xcv_dp_regression_make_data.py
+wrote xcv_dp_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xcv_dp_regression_file.R
+file = xcv_dp_regression_data.txt 
+n = 120 
+p = 3 
+gamma_set = 1 2 3 
+lambda_set = 0.2 0.5 1 
+delta = 5 
+eps = 0.001
+gamma = 1 
+lambda = 0.2 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 12.997147343353
+train error = 21.106009891080
+gamma = 2 
+lambda = 0.2 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 12.997147343353
+train error = 21.106009891080
+gamma = 3 
+lambda = 0.2 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 12.997147343353
+train error = 21.106009891080
+gamma = 1 
+lambda = 0.5 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 22.550102711974
+train error = 30.200487330310
+gamma = 2 
+lambda = 0.5 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 22.550102711974
+train error = 30.200487330310
+gamma = 3 
+lambda = 0.5 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 22.550102711974
+train error = 30.200487330310
+gamma = 1 
+lambda = 1 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 56.592402752100
+train error = 57.192537864488
+gamma = 2 
+lambda = 1 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 56.592402752100
+train error = 57.192537864488
+gamma = 3 
+lambda = 1 
+estimated changepoints = 39 79 
+n changepoints = 2 
+test error = 56.592402752100
+train error = 57.192537864488
+best gamma = 1 
+best lambda = 0.2 
+best index = 1 1 
+best changepoints = 39 79 
+best test error = 12.997147343353
+elapsed seconds = 0.870
+
+[3/3] Running xsim_cv_dp_regression_file.exe
+ file               =xcv_dp_regression_data.txt
+ n                  =         120
+ p                  =           3
+ gamma_set          =   1.0000000000000000        2.0000000000000000        3.0000000000000000     
+ lambda_set         =  0.20000000000000001       0.50000000000000000        1.0000000000000000     
+ delta              =           5
+ eps                =   1.0000000000000000E-003
+ gamma              =   1.0000000000000000     
+ lambda             =  0.20000000000000001     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   12.997147343353440     
+ train error        =   21.106009891079552     
+ gamma              =   2.0000000000000000     
+ lambda             =  0.20000000000000001     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   12.997147343353440     
+ train error        =   21.106009891079552     
+ gamma              =   3.0000000000000000     
+ lambda             =  0.20000000000000001     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   12.997147343353440     
+ train error        =   21.106009891079552     
+ gamma              =   1.0000000000000000     
+ lambda             =  0.50000000000000000     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   22.550102711974372     
+ train error        =   30.200487330309826     
+ gamma              =   2.0000000000000000     
+ lambda             =  0.50000000000000000     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   22.550102711974372     
+ train error        =   30.200487330309826     
+ gamma              =   3.0000000000000000     
+ lambda             =  0.50000000000000000     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   22.550102711974372     
+ train error        =   30.200487330309826     
+ gamma              =   1.0000000000000000     
+ lambda             =   1.0000000000000000     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   56.592402752099851     
+ train error        =   57.192537864487505     
+ gamma              =   2.0000000000000000     
+ lambda             =   1.0000000000000000     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   56.592402752099851     
+ train error        =   57.192537864487505     
+ gamma              =   3.0000000000000000     
+ lambda             =   1.0000000000000000     
+ estimated          = 39 79
+ n changepoints     =           2
+ test error         =   56.592402752099851     
+ train error        =   57.192537864487505     
+ best gamma         =   1.0000000000000000     
+ best lambda        =  0.20000000000000001     
+ best index         =           1           1
+ best changepoints  = 39 79
+ best test error    =   12.997147343353440     
+
+wall time elapsed (s):     0.0501
+
+time elapsed (s)
+          xcv_dp_regression_make_data.py  xcv_dp_regression_file.R  xsim_cv_dp_regression_file.exe
+absolute                           0.208                     1.091                           0.224
+relative                           0.191                     1.000                           0.205
+
+Completed successfully.
+
+=== xlocal_refine_regression (65/117) ===
+[1/3] Running xdp_regression_make_data.py
+wrote xdp_regression_data.txt with 120 rows and 4 columns
+true changepoints = [40, 80]
+
+[2/3] Running xlocal_refine_regression_file.R
+file = xdp_regression_data.txt 
+n = 120 
+p = 3 
+gamma = 2 
+lambda = 0.5 
+delta = 5 
+zeta = 0.5 
+initial changepoints = 40 80 
+refined changepoints = 40 80 
+elapsed seconds = 0.950
+
+[3/3] Running xsim_local_refine_regression_file.exe
+ file               =xdp_regression_data.txt
+ n                  =         120
+ p                  =           3
+ gamma              =   2.0000000000000000     
+ lambda             =  0.50000000000000000     
+ delta              =           5
+ zeta               =  0.50000000000000000     
+ initial            = 40 80
+ refined            = 40 80
+
+wall time elapsed (s):     0.0242
+
+time elapsed (s)
+          xdp_regression_make_data.py  xlocal_refine_regression_file.R  xsim_local_refine_regression_file.exe
+absolute                        0.208                            1.155                                  0.239
+relative                        0.180                            1.000                                  0.207
+
+Completed successfully.
+
+=== xlocal_refine_univar (66/117) ===
+[1/3] Running xwbs_make_data.py
+wrote 300 observations to xwbs_data.txt
+wrote 300 intervals to xwbs_data_intervals.txt
+true changepoints = [20, 50, 170]
+
+[2/3] Running xlocal_refine_univar_file.R
+file = xwbs_data.txt 
+interval_file = xwbs_data_intervals.txt 
+n = 300 
+M = 300 
+delta = 5 
+tau = 4 
+initial changepoints = 19 50 170 
+refined changepoints = 19 50 171 
+elapsed seconds = 1.980
+
+[3/3] Running xsim_local_refine_univar_file.exe
+ file               =xwbs_data.txt
+ interval_file      =xwbs_data_intervals.txt
+ n                  =         300
+ M                  =         300
+ delta              =           5
+ tau                =   4.0000000000000000     
+ initial            = 19 50 170
+ refined            = 19 50 171
+
+wall time elapsed (s):     0.0067
+
+time elapsed (s)
+          xwbs_make_data.py  xlocal_refine_univar_file.R  xsim_local_refine_univar_file.exe
+absolute              0.176                        2.174                              0.164
+relative              0.081                        1.000                              0.075
+
+Completed successfully.
+
+=== xdp_univar (67/117) ===
+[1/3] Running xdp_univar_make_data.py
+wrote 300 observations to xdp_univar_data.txt
+true changepoints = [20, 50, 170]
+
+[2/3] Running xdp_univar_file.R
+file = xdp_univar_data.txt 
+n = 300 
+gamma = 5 
+delta = 5 
+estimated changepoints = 19 38 50 171 
+n changepoints = 4 
+partition last = 171 
+yhat checksum = -210.745076433704
+elapsed seconds = 0.640
+
+[3/3] Running xsim_dp_univar_file.exe
+ file               =xdp_univar_data.txt
+ n                  =         300
+ gamma              =   5.0000000000000000     
+ delta              =           5
+ estimated          = 19 38 50 171
+ n changepoints     =           4
+ partition last     =         171
+ yhat checksum      =  -210.74507643370424     
+
+wall time elapsed (s):     0.0035
+
+time elapsed (s)
+          xdp_univar_make_data.py  xdp_univar_file.R  xsim_dp_univar_file.exe
+absolute                    0.176              0.786                    0.147
+relative                    0.224              1.000                    0.186
+
+Completed successfully.
+
+=== xcv_dp_univar (68/117) ===
+[1/3] Running xcv_dp_univar_make_data.py
+wrote 300 observations to xcv_dp_univar_data.txt
+true changepoints = [20, 50, 170]
+
+[2/3] Running xcv_dp_univar_file.R
+file = xcv_dp_univar_data.txt 
+n = 300 
+gamma_set = 1 2 3 4 5 6 7 8 
+delta = 5 
+gamma = 1 
+estimated changepoints = 23 49 75 113 137 175 239 271 
+n changepoints = 8 
+test error = 202.038978797988
+train error = 139.440932744618
+gamma = 2 
+estimated changepoints = 23 49 75 173 239 271 
+n changepoints = 6 
+test error = 197.052486122601
+train error = 141.710690394191
+gamma = 3 
+estimated changepoints = 23 49 75 173 239 271 
+n changepoints = 6 
+test error = 197.052486122601
+train error = 141.710690394191
+gamma = 4 
+estimated changepoints = 23 49 173 
+n changepoints = 3 
+test error = 186.243700874414
+train error = 151.973518609554
+gamma = 5 
+estimated changepoints = 23 49 173 
+n changepoints = 3 
+test error = 186.243700874414
+train error = 151.973518609554
+gamma = 6 
+estimated changepoints = 23 49 173 
+n changepoints = 3 
+test error = 186.243700874414
+train error = 151.973518609554
+gamma = 7 
+estimated changepoints = 23 49 173 
+n changepoints = 3 
+test error = 186.243700874414
+train error = 151.973518609554
+gamma = 8 
+estimated changepoints = 23 49 173 
+n changepoints = 3 
+test error = 186.243700874414
+train error = 151.973518609554
+best gamma = 4 
+best index = 4 
+best changepoints = 23 49 173 
+best test error = 186.243700874414
+elapsed seconds = 1.030
+
+[3/3] Running xsim_cv_dp_univar_file.exe
+ file               =xcv_dp_univar_data.txt
+ n                  =         300
+ gamma_set          =           1           2           3           4           5           6           7           8
+ delta              =           5
+ gamma              =           1
+ estimated          = 23 49 75 113 137 175 239 271
+ n changepoints     =           8
+ test error         =   202.03897879798762     
+ train error        =   139.44093274461818     
+ gamma              =           2
+ estimated          = 23 49 75 173 239 271
+ n changepoints     =           6
+ test error         =   197.05248612260158     
+ train error        =   141.71069039419072     
+ gamma              =           3
+ estimated          = 23 49 75 173 239 271
+ n changepoints     =           6
+ test error         =   197.05248612260158     
+ train error        =   141.71069039419072     
+ gamma              =           4
+ estimated          = 23 49 173
+ n changepoints     =           3
+ test error         =   186.24370087441363     
+ train error        =   151.97351860955433     
+ gamma              =           5
+ estimated          = 23 49 173
+ n changepoints     =           3
+ test error         =   186.24370087441363     
+ train error        =   151.97351860955433     
+ gamma              =           6
+ estimated          = 23 49 173
+ n changepoints     =           3
+ test error         =   186.24370087441363     
+ train error        =   151.97351860955433     
+ gamma              =           7
+ estimated          = 23 49 173
+ n changepoints     =           3
+ test error         =   186.24370087441363     
+ train error        =   151.97351860955433     
+ gamma              =           8
+ estimated          = 23 49 173
+ n changepoints     =           3
+ test error         =   186.24370087441363     
+ train error        =   151.97351860955433     
+ best gamma         =           4
+ best index         =           4
+ best changepoints  = 23 49 173
+ best test error    =   186.24370087441363     
+
+wall time elapsed (s):     0.0077
+
+time elapsed (s)
+          xcv_dp_univar_make_data.py  xcv_dp_univar_file.R  xsim_cv_dp_univar_file.exe
+absolute                       0.257                 1.312                       0.172
+relative                       0.196                 1.000                       0.131
+
+Completed successfully.
+
+=== xtext_like (69/117) ===
+[1/4] Running xtext_like_make_data.py
+wrote 125 x 8 matrix to xtext_like_data.txt
+true bkps = [40, 75, 125]
+
+[2/4] Running xtext_like_file.py
+file = xtext_like_data.txt
+n = 125
+p = 8
+pen = 15.0
+min_size = 6
+estimated bkps = [125]
+elapsed seconds = 0.025
+
+[3/4] Running xtext_like_file.R
+file = xtext_like_data.txt 
+n = 125 
+p = 8 
+pen = 15 
+min_size = 6 
+estimated bkps = 125 
+elapsed seconds = 0.060
+
+[4/4] Running xsim_text_like_pelt_file.exe
+ file        =xtext_like_data.txt
+ n           =         125
+ p           =           8
+ pen         =   15.000000000000000     
+ min_seg_len =           6
+ jump        =           5
+ n_bkps      =           0
+ estimated   =         125
+
+wall time elapsed (s):     0.0026
+
+time elapsed (s)
+          xtext_like_make_data.py  xtext_like_file.py  xtext_like_file.R  xsim_text_like_pelt_file.exe
+absolute                    0.265               1.192              0.308                         0.170
+relative                    0.222               1.000              0.258                         0.143
+
+Completed successfully.
+
+=== xvariance_regime (70/117) ===
+[1/4] Running xvariance_regime_make_data.py
+wrote 3000 x 1 matrix to xvariance_regime_data.txt
+true bkps = [1080, 1920, 3000]
+
+[2/4] Running xvariance_regime_file.py
+file = xvariance_regime_data.txt
+n = 3000
+p = 1
+pen = 5.0
+min_size = 150
+estimated bkps = [1080, 1920, 3000]
+elapsed seconds = 7.363
+
+[3/4] Running xvariance_regime_file.R
+file = xvariance_regime_data.txt 
+n = 3000 
+p = 1 
+pen = 5 
+min_size = 150 
+estimated bkps = 1080 1920 3000 
+elapsed seconds = 2.360
+
+[4/4] Running xsim_variance_regime_pelt_file.exe
+ file        =xvariance_regime_data.txt
+ n           =        3000
+ p           =           1
+ pen         =   5.0000000000000000     
+ min_seg_len =         150
+ jump        =           5
+ n_bkps      =           2
+ estimated   =        1080        1920        3000
+
+wall time elapsed (s):     0.2066
+
+time elapsed (s)
+          xvariance_regime_make_data.py  xvariance_regime_file.py  xvariance_regime_file.R  xsim_variance_regime_pelt_file.exe
+absolute                          0.281                     8.278                    2.599                               0.337
+relative                          0.034                     1.000                    0.314                               0.041
+
+Completed successfully.
+
+=== xkernel (71/117) ===
+[1/4] Running xkernel_make_data.py
+wrote 1000 observations to xkernel_data.txt
+true bkps = [264, 513, 755, 1000]
+
+[2/4] Running xkernel_file.py
+file = xkernel_data.txt
+n = 1000
+n_bkps = 3
+estimated bkps = [6, 11, 24, 1000]
+elapsed seconds = 0.047
+
+[3/4] Running xkernel_file_kerSeg.R
+Warning message:
+package 'kerSeg' was built under R version 4.4.3 
+file = xkernel_data.txt 
+n = 1000 
+n_bkps = 3 
+min_size = 2 
+estimated bkps = 992 996 998 1000 
+elapsed seconds = 0.180
+
+[4/4] Running xsim_kernel_file.exe
+ file        =xkernel_data.txt
+ n           =        1000
+ n_bkps      =           3
+ min_seg_len =           2
+ estimated   =           6          11          24        1000
+
+wall time elapsed (s):     0.0290
+
+time elapsed (s)
+          xkernel_make_data.py  xkernel_file.py  xkernel_file_kerSeg.R  xsim_kernel_file.exe
+absolute                 0.959            0.997                  0.571                 0.231
+relative                 0.962            1.000                  0.572                 0.232
+
+Completed successfully.
+
+=== xcosts_mean_variance (72/117) ===
+[1/4] Running xcosts_mean_variance_make_data.py
+wrote 600 observations to xcosts_mean_variance_data.txt
+true bkps = [150, 300, 450, 600]
+
+[2/4] Running xcosts_mean_variance_file.py
+c:\Programs\Python313\Lib\site-packages\ruptures\costs\costnormal.py:28: UserWarning: New behaviour in v1.1.5: a small bias is added to the covariance matrix to cope with truly constant segments (see PR#198).
+  warnings.warn(
+file = xcosts_mean_variance_data.txt
+n = 600
+n_bkps = 3
+min_size = 30
+
+model = l1
+note = robust location shifts
+estimated bkps = [150, 297, 450, 600]
+elapsed seconds = 4.533
+
+model = l2
+note = mean shifts
+estimated bkps = [150, 300, 450, 600]
+elapsed seconds = 3.433
+
+model = normal
+note = mean and variance shifts
+estimated bkps = [150, 300, 450, 600]
+elapsed seconds = 5.480
+
+model = rbf
+note = general distribution shifts
+estimated bkps = [150, 300, 450, 600]
+elapsed seconds = 7.058
+
+wall time elapsed (s) = 20.513
+
+[3/4] Running xcosts_mean_variance_file.R
+file = xcosts_mean_variance_data.txt 
+n = 600 
+n_bkps = 3 
+min_size = 30 
+
+model = l1 
+note = robust location shifts 
+estimated bkps = 150 297 450 600 
+elapsed seconds = 16.310
+
+model = l2 
+note = mean shifts 
+estimated bkps = 150 300 450 600 
+elapsed seconds = 1.640
+
+model = normal 
+note = mean and variance shifts 
+estimated bkps = 150 300 450 600 
+elapsed seconds = 1.870
+
+model = rbf 
+note = general distribution shifts 
+estimated bkps = 150 300 450 600 
+elapsed seconds = 1.860
+
+wall time elapsed (s) = 21.700
+
+[4/4] Running xcosts_mean_variance_file.exe
+ file        =xcosts_mean_variance_data.txt
+ n           =         600
+ n_bkps      =           3
+ min_seg_len =          30
+
+ model       = l1
+ note        = robust location shifts
+ estimated   =         150         297         450         600
+elapsed seconds =    0.760
+
+ model       = l2
+ note        = mean shifts
+ estimated   =         150         300         450         600
+elapsed seconds =    0.008
+
+ model       = normal
+ note        = mean and variance shifts
+ estimated   =         150         300         450         600
+elapsed seconds =    0.016
+
+ model       = rbf
+ note        = general distribution shifts
+ estimated   =         150         300         450         600
+elapsed seconds =    0.008
+
+
+wall time elapsed (s):     0.7981
+
+time elapsed (s)
+          xcosts_mean_variance_make_data.py  xcosts_mean_variance_file.py  xcosts_mean_variance_file.R  xcosts_mean_variance_file.exe
+absolute                              0.207                        21.474                       21.878                          0.984
+relative                              0.010                         1.000                        1.019                          0.046
+
+Completed successfully.
+
+=== xmetrics (73/117) ===
+[1/4] Running xmetrics_make_data.py
+wrote 1200 observations to xmetrics_data.txt
+true bkps = [283, 587, 899, 1200]
+
+[2/4] Running xmetrics_file.py
+file = xmetrics_data.txt
+n = 1200
+true bkps = [283, 587, 899, 1200]
+n_bkps = 3
+min_size = 40
+margin = 40
+
+method = binseg
+estimated bkps = [283, 587, 901, 1200]
+precision = 1.000
+recall = 1.000
+hausdorff = 2.000
+randindex = 0.998301
+elapsed seconds = 0.085
+
+method = bottomup
+estimated bkps = [300, 600, 900, 1200]
+precision = 1.000
+recall = 1.000
+hausdorff = 17.000
+randindex = 0.975108
+elapsed seconds = 0.001
+
+method = window
+estimated bkps = [np.int64(285), np.int64(590), np.int64(910), 1200]
+precision = 1.000
+recall = 1.000
+hausdorff = 11.000
+randindex = 0.986667
+elapsed seconds = 0.008
+
+method = dynp
+estimated bkps = [283, 587, 901, 1200]
+precision = 1.000
+recall = 1.000
+hausdorff = 2.000
+randindex = 0.998301
+elapsed seconds = 15.683
+
+wall time elapsed (s) = 15.799
+
+[3/4] Running xmetrics_file.R
+file = xmetrics_data.txt 
+n = 1200 
+true bkps = 283 587 899 1200 
+n_bkps = 3 
+min_size = 40 
+margin = 40 
+
+method = binseg 
+estimated bkps = 283 587 901 1200 
+precision = 1.000
+recall = 1.000
+hausdorff = 2.000
+randindex = 0.998301
+elapsed seconds = 0.030
+
+method = bottomup 
+estimated bkps = 300 600 900 1200 
+precision = 1.000
+recall = 1.000
+hausdorff = 17.000
+randindex = 0.975108
+elapsed seconds = 0.030
+
+method = window 
+estimated bkps = 285 590 910 1200 
+precision = 1.000
+recall = 1.000
+hausdorff = 11.000
+randindex = 0.986667
+elapsed seconds = 0.010
+
+method = dynp 
+estimated bkps = 283 587 901 1200 
+precision = 1.000
+recall = 1.000
+hausdorff = 2.000
+randindex = 0.998301
+elapsed seconds = 5.180
+
+wall time elapsed (s) = 5.280
+
+[4/4] Running xmetrics_file.exe
+ file        =xmetrics_data.txt
+ n           =        1200
+ true bkps   =         283         587         899        1200
+ n_bkps      =           3
+ min_seg_len =          40
+ margin      =          40
+
+ method      =binseg
+ estimated   =         283         587         901        1200
+precision =    1.000
+recall =    1.000
+hausdorff =    2.000
+randindex =   0.998301
+elapsed seconds =    0.000
+
+ method      =bottomup
+ estimated   =         300         600         900        1200
+precision =    1.000
+recall =    1.000
+hausdorff =   17.000
+randindex =   0.975108
+elapsed seconds =    0.000
+
+ method      =window
+ estimated   =         285         590         910        1200
+precision =    1.000
+recall =    1.000
+hausdorff =   11.000
+randindex =   0.986667
+elapsed seconds =    0.000
+
+ method      =dynp
+ estimated   =         283         587         901        1200
+precision =    1.000
+recall =    1.000
+hausdorff =    2.000
+randindex =   0.998301
+elapsed seconds =    0.030
+
+wall time elapsed (s):     0.0423
+
+time elapsed (s)
+          xmetrics_make_data.py  xmetrics_file.py  xmetrics_file.R  xmetrics_file.exe
+absolute                  0.802            16.914            5.436              0.213
+relative                  0.047             1.000            0.321              0.013
+
+Completed successfully.
+
+=== xbocpd (74/117) ===
+[1/3] Running xbocpd_make_data.py
+wrote 600 observations to xbocpd_data.txt
+true changepoints = [0, 200, 400]
+
+[2/3] Running xbocpd_file.py
+file = xbocpd_data.txt
+n = 600
+lam = 120.0
+estimated changepoints = [0, 199, 399]
+elapsed seconds = 0.037
+
+[3/3] Running xsim_bocpd_file.exe
+ file        =xbocpd_data.txt
+ n           =         600
+ lam         =   120.00000000000000     
+ estimated   =           0         200         399
+
+wall time elapsed (s):     0.0150
+
+time elapsed (s)
+          xbocpd_make_data.py  xbocpd_file.py  xsim_bocpd_file.exe
+absolute                0.176           0.219                0.224
+relative                0.805           1.000                1.022
+
+Completed successfully.
+
+=== xbocpd_poisson (75/117) ===
+[1/3] Running xbocpd_poisson_make_data.py
+wrote 600 observations to xbocpd_poisson_data.txt
+true changepoints = [0, 200, 400]
+
+[2/3] Running xbocpd_poisson_file.py
+file = xbocpd_poisson_data.txt
+n = 600
+estimated changepoints = [0, 199, 402]
+elapsed seconds = 0.034
+
+[3/3] Running xsim_bocpd_poisson_file.exe
+ file        =xbocpd_poisson_data.txt
+ n           =         600
+ lam         =   120.00000000000000     
+ estimated   =           0         199         402
+
+wall time elapsed (s):     0.0136
+
+time elapsed (s)
+          xbocpd_poisson_make_data.py  xbocpd_poisson_file.py  xsim_bocpd_poisson_file.exe
+absolute                        0.176                   0.207                        0.189
+relative                        0.850                   1.000                        0.912
+
+Completed successfully.
+
+=== xbocpd_beta_bernoulli (76/117) ===
+[1/3] Running xbocpd_beta_bernoulli_make_data.py
+wrote 600 observations to xbocpd_beta_bernoulli_data.txt
+true changepoints = [0, 200, 400]
+
+[2/3] Running xbocpd_beta_bernoulli_file.py
+file = xbocpd_beta_bernoulli_data.txt
+n = 600
+estimated changepoints = [0, 197, 398]
+elapsed seconds = 0.025
+
+[3/3] Running xsim_bocpd_beta_bernoulli_file.exe
+ file        =xbocpd_beta_bernoulli_data.txt
+ n           =         600
+ lam         =   120.00000000000000     
+ estimated   =           0         197         398
+
+wall time elapsed (s):     0.0174
+
+time elapsed (s)
+          xbocpd_beta_bernoulli_make_data.py  xbocpd_beta_bernoulli_file.py  xsim_bocpd_beta_bernoulli_file.exe
+absolute                               0.192                          0.205                               0.220
+relative                               0.934                          1.000                               1.070
+
+Completed successfully.
+
+=== xbocd (77/117) ===
+[1/3] Running xbocd_make_data.py
+wrote 400 observations to xbocd_data.txt
+true changepoints = [150, 300]
+
+[2/3] Running xbocd_file.py
+file = xbocd_data.txt
+n = 400
+lambda = 100.0
+distribution = StudentT
+hazard = ConstantHazard
+estimated changepoints = [150, 300]
+final MAP run length = 100
+elapsed seconds = 0.092
+
+[3/3] Running xsim_bocd_file.exe
+file = xbocd_data.txt
+n = 400
+lambda = 100.0
+distribution = StudentT
+hazard = ConstantHazard
+estimated changepoints = 150 300
+final MAP run length = 100
+
+wall time elapsed (s):     0.0079
+
+time elapsed (s)
+          xbocd_make_data.py  xbocd_file.py  xsim_bocd_file.exe
+absolute               0.819          0.926               0.189
+relative               0.885          1.000               0.204
+
+Completed successfully.
+
+=== xbocpd_changepoynt (78/117) ===
+[1/3] Running xbocpd_changepoynt_make_data.py
+wrote 600 observations to xbocpd_changepoynt_data.txt
+true changepoints = [0, 200, 400]
+
+[2/3] Running xbocpd_changepoynt_file.py
+2.4204949746566835 0.6828232500000001 3.1333513322344673
+file = xbocpd_changepoynt_data.txt
+n = 600
+run_length = 120
+raw score argmax = 4
+post_warmup argmax = 405
+max score = 1.000000
+prior_mean = 0.682823
+prior_var = 3.133351
+signal_var = 2.420495
+elapsed seconds = 0.416
+
+[3/3] Running xsim_bocpd_changepoynt_file.exe
+ file               =xbocpd_changepoynt_data.txt
+ n                  =         600
+ run_length         =         120
+ raw argmax         =           4
+ post_warmup argmax =         405
+ max score          =   1.0000000000000007     
+ prior_mean         =  0.68282324999999999     
+ prior_var          =   3.1333513322344650     
+ signal_var         =   2.4204949746566964     
+
+wall time elapsed (s):     0.0103
+
+time elapsed (s)
+          xbocpd_changepoynt_make_data.py  xbocpd_changepoynt_file.py  xsim_bocpd_changepoynt_file.exe
+absolute                            0.834                       1.204                            0.086
+relative                            0.692                       1.000                            0.071
+
+Completed successfully.
+
+=== xsst (79/117) ===
+[1/3] Running xsst_make_data.py
+wrote 640 observations to xsst_data.txt
+true changepoint = 320
+
+[2/3] Running xsst_file.py
+file = xsst_data.txt
+n = 640
+true changepoint = 320
+window_length = 48
+n_windows = 48
+lag = 16
+rank = 2
+scoring_step = 1
+method = naive
+estimated changepoint = 325
+max raw score = 0.001225
+elapsed seconds = 3.613
+
+[3/3] Running xsim_sst_file.exe
+ file               =xsst_data.txt
+ n                  =         640
+ window_length      =          48
+ n_windows          =          48
+ lag                =          16
+ rank               =           2
+ scoring_step       =           1
+ method             = naive
+ estimated          =         325
+ max raw score      =   1.2247549549287973E-003
+
+wall time elapsed (s):     6.1205
+
+time elapsed (s)
+          xsst_make_data.py  xsst_file.py  xsim_sst_file.exe
+absolute              0.987         4.425              6.187
+relative              0.223         1.000              1.398
+
+Completed successfully.
+
+=== xesst (80/117) ===
+[1/3] Running xesst_make_data.py
+wrote 640 observations to xesst_data.txt
+true changepoint = 320
+
+[2/3] Running xesst_file.py
+file = xesst_data.txt
+n = 640
+true changepoint = 320
+window_length = 48
+n_windows = 24
+lag = 24
+rank = 2
+scoring_step = 1
+method = exact
+estimated changepoint = 279
+max raw score = 0.000641
+elapsed seconds = 0.387
+
+[3/3] Running xsim_esst_file.exe
+ file               =xesst_data.txt
+ n                  =         640
+ window_length      =          48
+ n_windows          =          24
+ lag                =          24
+ rank               =           2
+ scoring_step       =           1
+ method             = exact
+ estimated          =         279
+ max raw score      =   6.4174808233982597E-004
+
+wall time elapsed (s):     2.7620
+
+time elapsed (s)
+          xesst_make_data.py  xesst_file.py  xsim_esst_file.exe
+absolute               0.646          1.079               2.855
+relative               0.599          1.000               2.646
+
+Completed successfully.
+
+=== xrulsif (81/117) ===
+[1/3] Running xrulsif_make_data.py
+wrote 400 observations to xrulsif_data.txt
+true changepoint = 200
+
+[2/3] Running xrulsif_file.py
+file = xrulsif_data.txt
+n = 400
+true changepoint = 200
+window_length = 10
+n_windows = 50
+lag = 50
+alpha = 0.1
+sigma = 2.0
+lambda = 0.01
+scoring_step = 1
+estimated changepoint = 116
+max raw score = 0.050935
+elapsed seconds = 0.165
+
+[3/3] Running xsim_rulsif_file.exe
+ file               =xrulsif_data.txt
+ n                  =         400
+ window_length      =          10
+ n_windows          =          50
+ lag                =          50
+ alpha              =  0.10000000000000001     
+ sigma              =   2.0000000000000000     
+ lambda             =   1.0000000000000000E-002
+ scoring_step       =           1
+ estimated          =         116
+ max raw score      =   5.0935029169530632E-002
+
+wall time elapsed (s):     0.1826
+
+time elapsed (s)
+          xrulsif_make_data.py  xrulsif_file.py  xsim_rulsif_file.exe
+absolute                 0.749            0.890                 0.261
+relative                 0.842            1.000                 0.294
+
+Completed successfully.
+
+=== xulsif (82/117) ===
+[1/3] Running xulsif_make_data.py
+wrote 400 observations to xulsif_data.txt
+true changepoint = 200
+
+[2/3] Running xulsif_file.py
+file = xulsif_data.txt
+n = 400
+true changepoint = 200
+window_length = 10
+n_windows = 50
+lag = 50
+alpha = 0.0
+sigma = 2.0
+lambda = 0.01
+scoring_step = 1
+estimated changepoint = 194
+max raw score = 3.507523
+elapsed seconds = 0.142
+
+[3/3] Running xsim_ulsif_file.exe
+ file               =xulsif_data.txt
+ n                  =         400
+ window_length      =          10
+ n_windows          =          50
+ lag                =          50
+ alpha              =   0.0000000000000000     
+ sigma              =   2.0000000000000000     
+ lambda             =   1.0000000000000000E-002
+ scoring_step       =           1
+ estimated          =         194
+ max raw score      =   3.5075228651085668     
+
+wall time elapsed (s):     0.1563
+
+time elapsed (s)
+          xulsif_make_data.py  xulsif_file.py  xsim_ulsif_file.exe
+absolute                0.687           0.860                0.260
+relative                0.799           1.000                0.302
+
+Completed successfully.
+
+=== xargpcpd (83/117) ===
+[1/3] Running xargpcpd_make_data.py
+wrote 600 observations to xargpcpd_data.txt
+true changepoints = [0, 200, 400]
+
+[2/3] Running xargpcpd_file.py
+file = xargpcpd_data.txt
+n = 600
+estimated changepoints = [0, 199, 399, 411]
+elapsed seconds = 0.075
+
+[3/3] Running xsim_argpcpd_gp_file.exe
+ file        =xargpcpd_data.txt
+ n           =         600
+ mode        =dense
+ max_lag     =          12
+ max_train   =         600
+ hazard_h    =  -5.0000000000000000     
+ estimated   =           0         199         399         411
+
+wall time elapsed (s):     0.4903
+
+time elapsed (s)
+          xargpcpd_make_data.py  xargpcpd_file.py  xsim_argpcpd_gp_file.exe
+absolute                  0.209             0.301                     0.719
+relative                  0.695             1.000                     2.389
+
+Completed successfully.
+
+=== xargpcpd_rust (84/117) ===
+[1/3] Running xargpcpd_make_data.py
+wrote 600 observations to xargpcpd_data.txt
+true changepoints = [0, 200, 400]
+
+[2/3] Running xargpcpd_file.py
+file = xargpcpd_data.txt
+n = 600
+estimated changepoints = [0, 199, 399, 411]
+elapsed seconds = 0.110
+
+[3/3] Running xsim_argpcpd_gp_file.exe
+ file        =xargpcpd_data.txt
+ n           =         600
+ mode        =rust
+ max_lag     =          12
+ hazard_h    =  -5.0000000000000000     
+ estimated   =           0         199         399         411
+
+wall time elapsed (s):     0.0225
+
+time elapsed (s)
+          xargpcpd_make_data.py  xargpcpd_file.py  xsim_argpcpd_gp_file.exe
+absolute                  1.695             0.345                     0.061
+relative                  4.918             1.000                     0.178
+
+Completed successfully.
+
+=== xseeded_binseg (85/117) ===
+[1/3] Running xseeded_binseg_make_data.py
+wrote 20000 observations to xseeded_binseg_data.txt
+true changepoints = [0, 4000, 8000, 12000, 16000]
+
+[2/3] Running xseeded_binseg_file.py
+file = xseeded_binseg_data.txt
+n = 20000
+penalty = 19.806975
+estimated changepoints = [4000, 8000, 12000, 16000]
+elapsed seconds = 8.306
+
+[3/3] Running xsim_seeded_binseg_file.exe
+ file        =xseeded_binseg_data.txt
+ n           =       20000
+ penalty     =   19.806975105072254     
+ max_int_len =        2500
+ estimated   =        4000        8000       12000       16000
+
+wall time elapsed (s):     0.2213
+
+time elapsed (s)
+          xseeded_binseg_make_data.py  xseeded_binseg_file.py  xsim_seeded_binseg_file.exe
+absolute                       19.245                  10.521                        0.372
+relative                        1.829                   1.000                        0.035
+
+Completed successfully.
+
+=== xcrops (86/117) ===
+[1/3] Running xcrops_make_data.py
+wrote 4000 observations to xcrops_data.txt
+true changepoints = [0, 800, 1600, 2400, 3200]
+
+[2/3] Running xcrops_file.py
+file = xcrops_data.txt
+n = 4000
+optimal penalty = 6.687435
+path solutions = 6
+estimated changepoints = [801, 1600, 2400, 3200]
+elapsed seconds = 5.222
+
+[3/3] Running xsim_crops_file.exe
+ file           =xcrops_data.txt
+ n              =        4000
+ optimal penalty=   6.6874354494976469     
+ path solutions =           6
+ estimated      =         801        1600        2400        3200
+
+wall time elapsed (s):     0.0715
+
+time elapsed (s)
+          xcrops_make_data.py  xcrops_file.py  xsim_crops_file.exe
+absolute                1.933           7.413                0.246
+relative                0.261           1.000                0.033
+
+Completed successfully.
+
+=== xcapa (87/117) ===
+[1/3] Running xcapa_make_data.py
+wrote 5000 observations to xcapa_data.txt
+true segment anomalies = [(1000, 1100), (2800, 2950), (4000, 4200)]
+true point anomalies = [(2000, 2001)]
+
+[2/3] Running xcapa_file.py
+file = xcapa_data.txt
+n = 5000
+segment penalty = 24.000000
+point penalty = 14.000000
+estimated segment anomalies = [(1000, 1100), (2800, 2950), (4000, 4200)]
+estimated point anomalies = [(2000, 2001)]
+elapsed seconds = 2.342
+
+[3/3] Running xsim_capa_file.exe
+ file             =xcapa_data.txt
+ n                =        5000
+ segment penalty  =   24.000000000000000     
+ point penalty    =   14.000000000000000     
+segment anomalies= [1000,1100) [2800,2950) [4000,4200)
+point anomalies  = [2000,2001)
+
+wall time elapsed (s):     0.0642
+
+time elapsed (s)
+          xcapa_make_data.py  xcapa_file.py  xsim_capa_file.exe
+absolute               2.229          4.768               0.245
+relative               0.467          1.000               0.051
+
+Completed successfully.
+
+=== xclass (88/117) ===
+[1/3] Running xclass_make_data.py
+wrote 240 observations to xclass_data.txt
+true changepoint = 120
+
+[2/3] Running xclass_file.py
+file = xclass_data.txt
+n = 240
+window_size = 12
+k_neighbours = 3
+excl_radius = 5
+threshold = 0.5
+estimated changepoint = 94
+score = 0.527933
+elapsed seconds = 27.609
+
+[3/3] Running xsim_class_file.exe
+ file         =xclass_data.txt
+ n            =         240
+ window_size  =          12
+ k_neighbours =           3
+ excl_radius  =           5
+ threshold    =  0.50000000000000000     
+ estimated    =          94
+ score        =  0.52793289824844691     
+
+wall time elapsed (s):     0.0055
+
+time elapsed (s)
+          xclass_make_data.py  xclass_file.py  xsim_class_file.exe
+absolute                1.714          29.755                0.159
+relative                0.058           1.000                0.005
+
+Completed successfully.
+
+=== xclap (89/117) ===
+[1/3] Running xclap_make_data.py
+wrote 480 labeled observations to xclap_data.txt
+regime starts = [0, 80, 160, 240, 320, 400]
+regime labels = [1, 2, 3, 1, 2, 3]
+phis = [0.8, -0.6, 0.2, 0.8, -0.6, 0.2]
+
+[2/3] Running xclap_file.py
+file = xclap_data.txt
+n = 480
+window_size = 20
+n_splits = 5
+sample_cap = 1000
+true label counts = {1: 14, 2: 14, 3: 14}
+pred label counts = {1: 10, 2: 14, 3: 18}
+true labels = [1, 1, 2, 1, 1, 3, 3, 2, 3, 1, 1, 3, 2, 1, 1, 2, 2, 3, 1, 1, 3, 2, 3, 3, 3, 1, 2, 3, 2, 2, 1, 3, 2, 3, 1, 2, 1, 2, 2, 2, 3, 3]
+pred labels = [2, 2, 2, 3, 2, 3, 3, 2, 2, 1, 3, 3, 3, 1, 2, 3, 3, 1, 2, 2, 1, 3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 3, 1, 1, 1, 2, 1, 3, 2, 1, 3, 3]
+macro_f1 = 0.469246
+elapsed seconds = 0.018
+
+[3/3] Running xsim_clap_file.exe
+ file           =xclap_data.txt
+ n              =         480
+ window_size    =          20
+ n_splits       =           5
+ sample_cap     =        1000
+true labels    = 1 1 2 1 1 3 3 2 3 1 1 3 2 1 1 2 2 3 1 1 3 2 3 3 3 1 2 3 2 2 1 3 2 3 1 2 1 2 2 2 3 3
+pred labels    = 2 2 2 3 2 3 3 2 2 1 3 3 3 1 2 3 3 1 2 2 1 3 3 3 3 3 3 2 2 2 1 3 1 1 1 2 1 3 2 1 3 3
+ macro_f1       =  0.46924603174603180     
+
+wall time elapsed (s):     0.0070
+
+time elapsed (s)
+          xclap_make_data.py  xclap_file.py  xsim_clap_file.exe
+absolute               0.245          0.231               0.171
+relative               1.061          1.000               0.738
+
+Completed successfully.
+
+=== xclasp_ensemble (90/117) ===
+[1/3] Running xclasp_ensemble_make_data.py
+wrote 240 observations to xclasp_ensemble_data.txt
+true changepoint = 120
+
+[2/3] Running xclasp_ensemble_file.py
+file = xclasp_ensemble_data.txt
+n = 240
+n_estimators = 5
+window_size = 12
+k_neighbours = 3
+excl_radius = 5
+temporal constraints = [(0, 240), (62, 240), (65, 233), (66, 219), (89, 240)]
+estimated changepoint = 96
+max profile score = 0.754136
+elapsed seconds = 38.084
+
+[3/3] Running xsim_clasp_ensemble_file.exe
+ file              =xclasp_ensemble_data.txt
+ n                 =         240
+ n_estimators      =           5
+ window_size       =          12
+ k_neighbours      =           3
+ excl_radius       =           5
+ estimated         =          96
+ max profile score =  0.75413570417551301     
+
+wall time elapsed (s):     0.0040
+
+time elapsed (s)
+          xclasp_ensemble_make_data.py  xclasp_ensemble_file.py  xsim_clasp_ensemble_file.exe
+absolute                         3.310                   40.610                         0.153
+relative                         0.082                    1.000                         0.004
+
+Completed successfully.
+
+=== xagglomerative_clap (91/117) ===
+[1/3] Running xagglomerative_clap_make_data.py
+wrote 480 observations to xagglomerative_clap_data.txt
+true_bkps = [80, 160, 240, 320, 400]
+true states = [1, 2, 3, 1, 2, 3]
+
+[2/3] Running xagglomerative_clap_file.py
+file = xagglomerative_clap_data.txt
+n = 480
+true_bkps = [80, 160, 240, 320, 400]
+window_size = 20
+n_splits = 5
+sample_cap = 1000
+segment labels = [1, 2, 3, 1, 2, 3]
+collapsed bkps = [80, 160, 240, 320, 400]
+collapsed labels = [1, 2, 3, 1, 2, 3]
+y_true = [1, 1, 2, 1, 1, 3, 3, 2, 3, 1, 1, 3, 2, 1, 1, 2, 2, 3, 1, 1, 3, 2, 3, 3, 3, 1, 2, 3, 2, 2, 1, 3, 2, 3, 1, 2, 1, 2, 2, 2, 3, 3]
+y_pred = [1, 1, 2, 1, 1, 3, 3, 2, 3, 1, 1, 3, 2, 1, 1, 2, 2, 3, 1, 1, 3, 2, 3, 3, 3, 1, 2, 3, 2, 2, 1, 3, 2, 3, 1, 2, 1, 2, 2, 2, 3, 3]
+classification gain = 0.666667
+elapsed seconds = 0.022
+
+[3/3] Running xsim_agglomerative_clap_file.exe
+ file                =xagglomerative_clap_data.txt
+ n                   =         480
+ true_bkps           =          80         160         240         320         400
+ window_size         =          20
+ n_splits            =           5
+ sample_cap          =        1000
+segment labels      = 1 2 3 1 2 3
+collapsed bkps      = 80 160 240 320 400
+collapsed labels    = 1 2 3 1 2 3
+ classification gain =  0.66666666666666674     
+
+wall time elapsed (s):     0.0056
+
+time elapsed (s)
+          xagglomerative_clap_make_data.py  xagglomerative_clap_file.py  xsim_agglomerative_clap_file.exe
+absolute                             1.887                        1.889                             0.171
+relative                             0.999                        1.000                             0.091
+
+Completed successfully.
+
+=== xroerich_windows (92/117) ===
+[1/3] Running xroerich_windows_make_data.py
+wrote 400 observations to xroerich_windows_data.txt
+true changepoint = 200
+
+[2/3] Running xroerich_windows_file.py
+file = xroerich_windows_data.txt
+n = 400
+window_size = 40
+periods = 1
+step = 1
+estimated changepoint = 199
+max raw score = 3.918070
+elapsed seconds = 0.236
+
+[3/3] Running xsim_roerich_windows_file.exe
+ file               =xroerich_windows_data.txt
+ n                  =         400
+ window_size        =          40
+ periods            =           1
+ step               =           1
+ estimated          =         199
+ max raw score      =   3.9180698726455336     
+
+wall time elapsed (s):     0.0100
+
+time elapsed (s)
+          xroerich_windows_make_data.py  xroerich_windows_file.py  xsim_roerich_windows_file.exe
+absolute                          6.758                     4.065                          0.095
+relative                          1.662                     1.000                          0.023
+
+Completed successfully.
+
+=== xroerich_energy (93/117) ===
+[1/3] Running xroerich_energy_make_data.py
+wrote 400 observations to xroerich_energy_data.txt
+true changepoint = 200
+
+[2/3] Running xroerich_energy_file.py
+file = xroerich_energy_data.txt
+n = 400
+window_size = 40
+periods = 1
+step = 1
+estimated changepoint = 199
+max raw score = 3.918070
+elapsed seconds = 0.249
+
+[3/3] Running xsim_roerich_energy_file.exe
+ file               =xroerich_energy_data.txt
+ n                  =         400
+ window_size        =          40
+ periods            =           1
+ step               =           1
+ estimated          =         199
+ max raw score      =   3.9180698726455336     
+
+wall time elapsed (s):     0.0076
+
+time elapsed (s)
+          xroerich_energy_make_data.py  xroerich_energy_file.py  xsim_roerich_energy_file.exe
+absolute                         4.239                    4.518                         0.090
+relative                         0.938                    1.000                         0.020
+
+Completed successfully.
+
+=== xroerich_classifier (94/117) ===
+[1/3] Running xroerich_classifier_make_data.py
+wrote 400 observations to xroerich_classifier_data.txt
+true changepoint = 200
+
+[2/3] Running xroerich_classifier_file.py
+file = xroerich_classifier_data.txt
+n = 400
+window_size = 40
+periods = 1
+step = 1
+base_classifier = qda
+metric = klsym
+estimated changepoint = 198
+max raw score = 8.382203
+elapsed seconds = 0.299
+
+[3/3] Running xsim_roerich_classifier_file.exe
+ file               =xroerich_classifier_data.txt
+ n                  =         400
+ window_size        =          40
+ periods            =           1
+ step               =           1
+ base_classifier    = qda
+ metric             = klsym
+ estimated          =         198
+ max raw score      =   8.3822033264462377     
+
+wall time elapsed (s):     0.0076
+
+time elapsed (s)
+          xroerich_classifier_make_data.py  xroerich_classifier_file.py  xsim_roerich_classifier_file.exe
+absolute                             1.357                        1.622                             0.080
+relative                             0.836                        1.000                             0.049
+
+Completed successfully.
+
+=== xroerich_classifier_cv (95/117) ===
+[1/3] Running xroerich_classifier_cv_make_data.py
+wrote 400 observations to xroerich_classifier_cv_data.txt
+true changepoint = 200
+
+[2/3] Running xroerich_classifier_cv_file.py
+file = xroerich_classifier_cv_data.txt
+n = 400
+window_size = 40
+periods = 1
+step = 1
+base_classifier = qda
+metric = klsym
+n_splits = 5
+estimated changepoint = 199
+max raw score = 8.430211
+elapsed seconds = 0.805
+
+[3/3] Running xsim_roerich_classifier_cv_file.exe
+ file               =xroerich_classifier_cv_data.txt
+ n                  =         400
+ window_size        =          40
+ periods            =           1
+ step               =           1
+ base_classifier    = qda
+ metric             = klsym
+ n_splits           =           5
+ estimated          =         199
+ max raw score      =   8.4302114897561840     
+
+wall time elapsed (s):     0.0093
+
+time elapsed (s)
+          xroerich_classifier_cv_make_data.py  xroerich_classifier_cv_file.py  xsim_roerich_classifier_cv_file.exe
+absolute                                1.333                           2.085                                0.106
+relative                                0.639                           1.000                                0.051
+
+Completed successfully.
+
+=== xroerich_rulsif (96/117) ===
+[1/3] Running xroerich_rulsif_make_data.py
+wrote 400 observations to xroerich_rulsif_data.txt
+true changepoint = 200
+
+[2/3] Running xroerich_rulsif_file.py
+file = xroerich_rulsif_data.txt
+n = 400
+window_size = 40
+periods = 1
+step = 1
+base_regressor = linear_rulsif
+metric = pesym
+alpha = 0.05
+l2 = 0.001
+estimated changepoint = 199
+max raw score = 8.374930
+elapsed seconds = 0.083
+
+[3/3] Running xsim_roerich_rulsif_file.exe
+ file               =xroerich_rulsif_data.txt
+ n                  =         400
+ window_size        =          40
+ periods            =           1
+ step               =           1
+ base_regressor     = linear_rulsif
+ metric             = pesym
+ alpha              =   5.0000000000000003E-002
+ l2                 =   1.0000000000000000E-003
+ estimated          =         199
+ max raw score      =   8.3749304944359864     
+
+wall time elapsed (s):     0.0059
+
+time elapsed (s)
+          xroerich_rulsif_make_data.py  xroerich_rulsif_file.py  xsim_roerich_rulsif_file.exe
+absolute                         0.207                    0.270                         0.092
+relative                         0.768                    1.000                         0.342
+
+Completed successfully.
+
+=== xbeast (97/117) ===
+[1/3] Running xbeast_make_data.py
+wrote 240 observations to xbeast_data.txt
+true changepoints = [80, 160]
+
+[2/3] Running xbeast_file.py
+file = xbeast_data.txt
+n = 240
+season = none
+max_cp = 4
+min_seg_len = 30
+estimated changepoints = [83, 169]
+model weights = [0.0, 0.0, 0.824565, 0.170527, 0.004908]
+top cp probabilities = [(35, 0.175435), (83, 1.0), (124, 0.004908), (169, 1.0)]
+elapsed seconds = 0.085
+
+[3/3] Running xsim_beast_file.exe
+file = xbeast_data.txt
+n = 240
+season = none
+max_cp = 4
+min_seg_len = 30
+estimated changepoints = 83 169
+model weights = .000000 .000000 .824565 .170527 .004908
+top cp probabilities = (35,.175435) (83,1.000000) (124,.004908) (169,1.000000)
+
+wall time elapsed (s):     0.0007
+
+time elapsed (s)
+          xbeast_make_data.py  xbeast_file.py  xsim_beast_file.exe
+absolute                0.209           0.284                0.187
+relative                0.736           1.000                0.656
+
+Completed successfully.
+
+=== xbeast_seasonal (98/117) ===
+[1/3] Running xbeast_seasonal_make_data.py
+wrote 240 observations to xbeast_seasonal_data.txt
+true changepoints = [80, 160]
+
+[2/3] Running xbeast_seasonal_file.py
+file = xbeast_seasonal_data.txt
+n = 240
+season = harmonic
+period = 12.0
+max_cp = 4
+min_seg_len = 30
+estimated changepoints = [81, 156, 210]
+seasonal beta = [1.343565, -0.812385]
+model weights = [0.0, 0.0, 0.346319, 0.575945, 0.077736]
+top cp probabilities = [(68, 0.077736), (81, 0.922264), (151, 0.346319), (156, 0.653681), (210, 0.653681)]
+elapsed seconds = 0.133
+
+[3/3] Running xsim_beast_seasonal_file.exe
+file = xbeast_seasonal_data.txt
+n = 240
+season = harmonic
+period = 12.0
+max_cp = 4
+min_seg_len = 30
+estimated changepoints = 81 156 210
+seasonal beta = 1.343565 -.812385
+model weights = .000000 .000000 .346319 .575945 .077736
+top cp probabilities = (68,.077736) (81,.922264) (151,.346319) (156,.653681) (210,.653681)
+
+wall time elapsed (s):     0.0007
+
+time elapsed (s)
+          xbeast_seasonal_make_data.py  xbeast_seasonal_file.py  xsim_beast_seasonal_file.exe
+absolute                         0.271                    0.363                         0.156
+relative                         0.746                    1.000                         0.430
+
+Completed successfully.
+
+=== xbeast_irreg (99/117) ===
+[1/3] Running xbeast_irreg_make_data.py
+wrote 220 observations to xbeast_irreg_data.txt
+true changepoints = [70, 145]
+
+[2/3] Running xbeast_irreg_file.py
+file = xbeast_irreg_data.txt
+n = 220
+season = none
+irregular = True
+max_cp = 4
+min_seg_len = 28
+estimated changepoints = [70, 145]
+model weights = [0.0, 0.0, 0.543441, 0.439385, 0.017174]
+top cp probabilities = [(33, 0.017174), (70, 1.0), (98, 0.456559), (145, 1.0)]
+elapsed seconds = 0.106
+
+[3/3] Running xsim_beast_irreg_file.exe
+file = xbeast_irreg_data.txt
+n = 220
+season = none
+irregular = True
+max_cp = 4
+min_seg_len = 28
+estimated changepoints = 70 145
+model weights = .000000 .000000 .543441 .439385 .017174
+top cp probabilities = (33,.017174) (70,1.000000) (98,.456559) (145,1.000000)
+
+wall time elapsed (s):     0.0005
+
+time elapsed (s)
+          xbeast_irreg_make_data.py  xbeast_irreg_file.py  xsim_beast_irreg_file.exe
+absolute                      0.241                 0.360                      0.172
+relative                      0.668                 1.000                      0.479
+
+Completed successfully.
+
+=== xbeast123 (100/117) ===
+[1/3] Running xbeast123_make_data.py
+wrote 240x3 observations to xbeast123_data.txt
+true changepoints = [80, 160]
+
+[2/3] Running xbeast123_file.py
+file = xbeast123_data.txt
+n = 240
+p = 3
+season = none
+beast123 regular interface
+max_cp = 4
+min_seg_len = 30
+series 1 changepoints = [81, 156]
+series 2 changepoints = [80, 118, 160]
+series 3 changepoints = [80, 160]
+top mean cp probabilities = [(80, 0.666667), (81, 0.333333), (118, 0.268948), (156, 0.316361), (160, 0.666667)]
+elapsed seconds = 0.348
+
+[3/3] Running xsim_beast123_file.exe
+file = xbeast123_data.txt
+n = 240
+p = 3
+season = none
+beast123 regular interface
+max_cp = 4
+min_seg_len = 30
+series 1 changepoints = 81 156
+series 2 changepoints = 80 118 160
+series 3 changepoints = 80 160
+top mean cp probabilities = (80,.666667) (81,.333333) (118,.268948) (156,.316361) (160,.666667)
+
+wall time elapsed (s):     0.0012
+
+time elapsed (s)
+          xbeast123_make_data.py  xbeast123_file.py  xsim_beast123_file.exe
+absolute                   0.240              0.599                   0.154
+relative                   0.401              1.000                   0.257
+
+Completed successfully.
+
+=== xstreaming_clasp (101/117) ===
+[1/3] Running xstreaming_clasp_make_data.py
+wrote 240 observations to xstreaming_clasp_data.txt
+true changepoint = 120
+
+[2/3] Running xstreaming_clasp_file.py
+file = xstreaming_clasp_data.txt
+n = 240
+n_timepoints = 200
+n_warmup = 100
+window_size = 12
+k_neighbours = 3
+jump = 5
+excl_radius = 5
+threshold = 0.5
+estimated changepoints = [109]
+last_cp = 55
+elapsed seconds = 5.416
+
+[3/3] Running xsim_streaming_clasp_file.exe
+ file         =xstreaming_clasp_data.txt
+ n            =         240
+ n_timepoints =         200
+ n_warmup     =         100
+ window_size  =          12
+ k_neighbours =           3
+ jump         =           5
+ excl_radius  =           5
+ threshold    =  0.50000000000000000     
+ estimated    = 109
+ last_cp      =          55
+
+wall time elapsed (s):     0.0053
+
+time elapsed (s)
+          xstreaming_clasp_make_data.py  xstreaming_clasp_file.py  xsim_streaming_clasp_file.exe
+absolute                          1.713                     7.690                          0.169
+relative                          0.223                     1.000                          0.022
+
+Completed successfully.
+
+=== xclasp (102/117) ===
+[1/3] Running xclasp_make_data.py
+wrote 500 observations to xclasp_data.txt
+true changepoints = [0, 100, 200, 300, 400]
+
+[2/3] Running xclasp_file.py
+file = xclasp_data.txt
+n = 500
+n_segments = 5
+window_size = 10
+k_neighbours = 3
+excl_radius = 5
+estimated changepoints = [52, 134, 187, 399]
+elapsed seconds = 37.042
+
+[3/3] Running xsim_clasp_file.exe
+ file         =xclasp_data.txt
+ n            =         500
+ n_segments   =           5
+ window_size  =          10
+ k_neighbours =           3
+ excl_radius  =           5
+ estimated    =          52         134         187         399
+
+wall time elapsed (s):     0.0150
+
+time elapsed (s)
+          xclasp_make_data.py  xclasp_file.py  xsim_clasp_file.exe
+absolute                2.464          39.489                0.156
+relative                0.062           1.000                0.004
+
+Completed successfully.
+
+=== xclasp_changepoynt (103/117) ===
+[1/3] Running xclasp_changepoynt_make_data.py
+wrote 880 observations to xclasp_changepoynt_data.txt
+true changepoints = [0, 220, 440, 660]
+
+[2/3] Running xclasp_changepoynt_file.py
+file = xclasp_changepoynt_data.txt
+n = 880
+n_segments = learn
+window_size = suss
+n_estimators = 10
+k_neighbours = 3
+excl_radius = 5
+validation = significance_test
+threshold = 1e-15
+estimated changepoints = [224]
+window_size used = 13
+n_segments used = 13
+elapsed seconds = 36.982
+
+[3/3] Running xsim_clasp_changepoynt_file.exe
+ file             =xclasp_changepoynt_data.txt
+ n                =         880
+ n_segments       =learn
+ window_size      =suss
+ n_estimators     =          10
+ k_neighbours     =           3
+ excl_radius      =           5
+ validation       =significance_test
+ threshold        =   1.0000000000000001E-015
+ estimated        =         224
+ window_size used =          13
+ n_segments used  =          13
+
+wall time elapsed (s):     0.0483
+
+time elapsed (s)
+          xclasp_changepoynt_make_data.py  xclasp_changepoynt_file.py  xsim_clasp_changepoynt_file.exe
+absolute                            1.920                      39.306                            0.195
+relative                            0.049                       1.000                            0.005
+
+Completed successfully.
+
+=== xclasp_alt (104/117) ===
+[1/3] Running xclasp_alt_make_data.py
+wrote 600 observations to xclasp_alt_data.txt
+true changepoints = [0, 120, 240, 360, 480]
+
+[2/3] Running xclasp_alt_file.py
+file = xclasp_alt_data.txt
+n = 600
+n_segments = 5
+window_size = 10
+k_neighbours = 3
+excl_radius = 5
+estimated changepoints = [59, 109, 189, 239]
+elapsed seconds = 37.935
+
+[3/3] Running xsim_clasp_alt_file.exe
+ file         =xclasp_alt_data.txt
+ n            =         600
+ n_segments   =           5
+ window_size  =          10
+ k_neighbours =           3
+ excl_radius  =           5
+ estimated    =          59         109         189         239
+
+wall time elapsed (s):     0.0182
+
+time elapsed (s)
+          xclasp_alt_make_data.py  xclasp_alt_file.py  xsim_clasp_alt_file.exe
+absolute                    1.763              40.311                    0.215
+relative                    0.044               1.000                    0.005
+
+Completed successfully.
+
+=== xchangepointnp (105/117) ===
+[1/3] Running xchangepointnp_make_data.py
+wrote xchangepointnp_data.txt with 120 rows
+true changepoints = [40, 80]
+
+[2/3] Running xchangepointnp_file.R
+Loading required package: changepoint
+Loading required package: zoo
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+Successfully loaded changepoint package version 2.3
+ WARNING: From v.2.3 the default method in cpt.* functions has changed from AMOC to PELT.
+ See NEWS for details of all changes.
+Warning messages:
+1: package 'changepoint.np' was built under R version 4.4.3 
+2: package 'changepoint' was built under R version 4.4.3 
+3: package 'zoo' was built under R version 4.4.3 
+file = xchangepointnp_data.txt 
+n = 120 
+penalty = MBIC 
+pen.value = 14.362475228346
+minseglen = 2 
+nquantiles = 10 
+cpts = 40 80 120 
+lastchangecpts checksum = 4680.000000000000
+lastchangelike checksum = 14855.662807046723
+numchangecpts checksum = 236.000000000000
+elapsed seconds = 0.000
+
+[3/3] Running xsim_changepointnp_file.exe
+ file               = xchangepointnp_data.txt
+ n                  =          120
+ penalty            = MBIC
+ pen.value          =    14.362475228346138     
+ minseglen          =            2
+ nquantiles         =           10
+ cpts               = 40 80 120                                                                                                                                                                                                                                                       
+ lastchangecpts checksum =    4680.0000000000000     
+ lastchangelike checksum =    14855.662807046718     
+ numchangecpts checksum =    236.00000000000000     
+
+wall time elapsed (s):     0.0024
+
+time elapsed (s)
+          xchangepointnp_make_data.py  xchangepointnp_file.R  xsim_changepointnp_file.exe
+absolute                        0.224                  1.757                        0.138
+relative                        0.127                  1.000                        0.079
+
+Completed successfully.
+
+=== xbcp (106/117) ===
+[1/3] Running xbcp_make_data.py
+wrote xbcp_data.txt with 120 rows
+true changepoints = [40, 80]
+
+[2/3] Running xbcp_file.R
+file = xbcp_data.txt 
+n = 120 
+burnin = 50 
+mcmc = 200 
+p0 = 0.200000000000
+w0 = 0.200000000000
+rng = Wichmann-Hill
+seed = 2439 10153 8035 
+pm checksum = 57.427550692908845
+pp checksum = 2.315000000000000
+top idx = 40 80 111 21 30 
+top val = 1.000000000000000 1.000000000000000 0.035000000000000 0.020000000000000 0.015000000000000 
+elapsed seconds = 0.050
+
+[3/3] Running xsim_bcp_file.exe
+ file               = xbcp_data.txt
+ n                  =          120
+ burnin             =           50
+ mcmc               =          200
+ p0                 =   0.20000000000000001     
+ w0                 =   0.20000000000000001     
+ rng                = Wichmann-Hill
+ seed               = 2439 10153 8035                                                                                                                                                                                                                                                 
+ pm checksum        =    57.427550692908888     
+ pp checksum        =    2.3149999999999982     
+ top idx            = 40 80 111 21 30                                                                                                                                                                                                                                                 
+ top val            = 1.000000000000000 1.000000000000000 .035000000000000 .020000000000000 .015000000000000                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+wall time elapsed (s):     0.0219
+
+time elapsed (s)
+          xbcp_make_data.py  xbcp_file.R  xsim_bcp_file.exe
+absolute              0.189        0.547              0.153
+relative              0.345        1.000              0.279
+
+Completed successfully.
+
+=== xbcp_multivar (107/117) ===
+[1/3] Running xbcp_multivar_make_data.py
+wrote xbcp_multivar_data.txt with shape 120 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xbcp_multivar_file.R
+file = xbcp_multivar_data.txt 
+n = 120 
+p = 2 
+burnin = 50 
+mcmc = 200 
+p0 = 0.200000000000
+w0 = 0.200000000000
+rng = Wichmann-Hill
+seed = 2439 10153 8035 
+pm checksum = 131.689336462344130
+pp checksum = 2.235000000000000
+top idx = 40 80 111 110 15 
+top val = 1.000000000000000 1.000000000000000 0.120000000000000 0.030000000000000 0.005000000000000 
+elapsed seconds = 0.030
+
+[3/3] Running xsim_bcp_multivar_file.exe
+ file               = xbcp_multivar_data.txt
+ n                  =          120
+ p                  =            2
+ burnin             =           50
+ mcmc               =          200
+ p0                 =   0.20000000000000001     
+ w0                 =   0.20000000000000001     
+ rng                = Wichmann-Hill
+ seed               = 2439 10153 8035                                                                                                                                                                                                                                                 
+ pm checksum        =    131.68933646234493     
+ pp checksum        =    2.2349999999999981     
+ top idx            = 40 80 111 110 15                                                                                                                                                                                                                                                
+ top val            = 1.000000000000000 1.000000000000000 .120000000000000 .030000000000000 .005000000000000                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+wall time elapsed (s):     0.0207
+
+time elapsed (s)
+          xbcp_multivar_make_data.py  xbcp_multivar_file.R  xsim_bcp_multivar_file.exe
+absolute                       0.210                 0.288                       0.219
+relative                       0.728                 1.000                       0.759
+
+Completed successfully.
+
+=== xbcp_reg (108/117) ===
+[1/3] Running xbcp_reg_make_data.py
+wrote xbcp_reg_data.txt with shape 120 x 2
+true changepoints = [40, 80]
+
+[2/3] Running xbcp_reg_file.R
+file = xbcp_reg_data.txt 
+n = 120 
+burnin = 50 
+mcmc = 200 
+p0 = 0.200000000000
+w0 = 0.200000000000 0.200000000000 
+rng = Wichmann-Hill
+seed = 2439 10153 8035 
+pm checksum = 43.437950043615032
+pp checksum = 2.230000000000000
+top idx = 40 80 21 75 111 
+top val = 1.000000000000000 1.000000000000000 0.020000000000000 0.020000000000000 0.020000000000000 
+elapsed seconds = 0.230
+
+[3/3] Running xsim_bcp_reg_file.exe
+ file               = xbcp_reg_data.txt
+ n                  =          120
+ burnin             =           50
+ mcmc               =          200
+ p0                 =   0.20000000000000001     
+ w0                 = .200000000000000 .200000000000000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+ rng                = Wichmann-Hill
+ seed               = 2439 10153 8035                                                                                                                                                                                                                                                 
+ pm checksum        =    43.437950043615004     
+ pp checksum        =    2.2299999999999982     
+ top idx            = 40 80 21 75 111                                                                                                                                                                                                                                                 
+ top val            = 1.000000000000000 1.000000000000000 .020000000000000 .020000000000000 .020000000000000                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+wall time elapsed (s):     0.0313
+
+time elapsed (s)
+          xbcp_reg_make_data.py  xbcp_reg_file.R  xsim_bcp_reg_file.exe
+absolute                  0.211            0.471                  0.188
+relative                  0.448            1.000                  0.399
+
+Completed successfully.
+
+=== xmcp_demo (109/117) ===
+[1/3] Running xmcp_demo_make_data.py
+prepared placeholder xmcp_demo_data.txt
+reference source = mcp::demo_fit package data
+
+[2/3] Running xmcp_demo_file.R
+NULL
+file = xmcp_demo_data.txt 
+draws_file = xmcp_demo_draws.txt 
+n = 100 
+ndraw = 3000 
+cp mean checksum = 100.483190408144623 
+param mean checksum = 115.720354615234299 
+fitted checksum = 1091.342623625183251 
+fitted head checksum = 156.533909370188042 
+sigma mean = 3.999923487386031 
+
+[3/3] Running xsim_mcp_demo_file.exe
+ file               =xmcp_demo_data.txt
+ draws_file         =xmcp_demo_draws.txt
+ n                  =         100
+ ndraw              =        3000
+ cp mean checksum   =   100.48319040814476     
+ param mean checksum =   115.72035461523446     
+ fitted checksum    =   1091.3426236251842     
+ fitted head checksum =   156.53390937018821     
+ sigma mean         =   3.9999234873860434     
+
+time elapsed (s)
+          xmcp_demo_make_data.py  xmcp_demo_file.R  xsim_mcp_demo_file.exe
+absolute                   0.095             1.830                   0.211
+relative                   0.052             1.000                   0.115
+
+Completed successfully.
+
+=== xmcp_fit (110/117) ===
+[1/3] Running xmcp_fit_make_data.py
+wrote xmcp_fit_data.txt with 100 rows
+true changepoints = [30, 65]
+
+[2/3] Running xmcp_fit_file.R
+Warning messages:
+1: package 'dplyr' was built under R version 4.4.3 
+2: package 'tidyr' was built under R version 4.4.3 
+3: package 'tidyselect' was built under R version 4.4.3 
+4: package 'future' was built under R version 4.4.3 
+5: package 'future.apply' was built under R version 4.4.3 
+6: package 'coda' was built under R version 4.4.3 
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 100
+   Unobserved stochastic nodes: 7
+   Total graph size: 1732
+
+Initializing model
+
+Finished sampling in 1.5 seconds
+
+file = xmcp_fit_data.txt 
+draws_file = xmcp_fit_draws.txt 
+repo = C:/rcode/public_domain/github/mcp 
+n = 100 
+ndraw = 600 
+chains = 3
+iter = 200
+adapt = 100
+cp mean checksum = 42.933754093008218 
+param mean checksum = 70.391626347696715 
+fitted checksum = 1813.884427345888980 
+fitted head checksum = 104.056716192660289 
+sigma mean = 3.663581633146079 
+
+[3/3] Running xsim_mcp_fit_file.exe
+ file               =xmcp_fit_data.txt
+ draws_file         =xmcp_fit_draws.txt
+ n                  =         100
+ ndraw              =         600
+ cp mean checksum   =   42.933754093008261     
+ param mean checksum =   70.391626347696786     
+ fitted checksum    =   1813.8844273458894     
+ fitted head checksum =   104.05671619266036     
+ sigma mean         =   3.6635816331460798     
+
+time elapsed (s)
+          xmcp_fit_make_data.py  xmcp_fit_file.R  xsim_mcp_fit_file.exe
+absolute                  0.194            3.964                  0.158
+relative                  0.049            1.000                  0.040
+
+Completed successfully.
+
+=== xmcp_sigma (111/117) ===
+[1/3] Running xmcp_sigma_make_data.py
+prepared placeholder xmcp_sigma_data.txt
+reference source = repo mcp variance example
+
+[2/3] Running xmcp_sigma_file.R
+Warning messages:
+1: package 'dplyr' was built under R version 4.4.3 
+2: package 'tidyr' was built under R version 4.4.3 
+3: package 'tidyselect' was built under R version 4.4.3 
+4: package 'future' was built under R version 4.4.3 
+5: package 'future.apply' was built under R version 4.4.3 
+6: package 'coda' was built under R version 4.4.3 
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 100
+   Unobserved stochastic nodes: 7
+   Total graph size: 2129
+
+Initializing model
+
+Finished sampling in 0.4 seconds
+
+file = xmcp_sigma_data.txt 
+draws_file = xmcp_sigma_draws.txt 
+repo = C:/rcode/public_domain/github/mcp 
+n = 100 
+ndraw = 600 
+chains = 3
+iter = 200
+adapt = 100
+cp mean checksum = 100.156062230458488 
+param mean checksum = 159.251499451872149 
+fitted checksum = 2759.650626398884469 
+fitted head checksum = 214.628178266826552 
+sigma fitted checksum = 926.880409220522210 
+sigma head checksum = 80.788711967064927 
+sigma param checksum = 35.630646079434683 
+
+[3/3] Running xsim_mcp_sigma_file.exe
+ file               =xmcp_sigma_data.txt
+ draws_file         =xmcp_sigma_draws.txt
+ n                  =         100
+ ndraw              =         600
+ cp mean checksum   =   100.15606223045846     
+ param mean checksum =   159.25149945187215     
+ fitted checksum    =   2759.6506263988817     
+ fitted head checksum =   214.62817826682652     
+ sigma fitted checksum =   926.88040922052255     
+ sigma head checksum =   80.788711967064884     
+ sigma param checksum =   35.630646079434698     
+
+time elapsed (s)
+          xmcp_sigma_make_data.py  xmcp_sigma_file.R  xsim_mcp_sigma_file.exe
+absolute                    0.100              1.278                    0.195
+relative                    0.078              1.000                    0.152
+
+Completed successfully.
+
+=== xmcp_ar (112/117) ===
+[1/3] Running xmcp_ar_make_data.py
+wrote xmcp_ar_data.txt with 120 rows
+true params = {int_1: 20, ar1_1: 0.7, sigma_1: 5}
+
+[2/3] Running xmcp_ar_file.R
+Warning messages:
+1: package 'dplyr' was built under R version 4.4.3 
+2: package 'tidyr' was built under R version 4.4.3 
+3: package 'tidyselect' was built under R version 4.4.3 
+4: package 'future' was built under R version 4.4.3 
+5: package 'future.apply' was built under R version 4.4.3 
+6: package 'coda' was built under R version 4.4.3 
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 120
+   Unobserved stochastic nodes: 3
+   Total graph size: 1100
+
+Initializing model
+
+Finished sampling in 0.4 seconds
+
+file = xmcp_ar_data.txt 
+draws_file = xmcp_ar_draws.txt 
+repo = C:/rcode/public_domain/github/mcp 
+n = 120 
+ndraw = 600 
+chains = 3
+iter = 200
+adapt = 100
+param mean checksum = 23.721040322805244 
+fitted checksum = 2285.953813004510721 
+fitted head checksum = 190.496151083709208 
+ar mean = 0.703973380158425 
+int mean = 19.049615108370922 
+sigma mean = 3.967451834275896 
+
+[3/3] Running xsim_mcp_ar_file.exe
+ file               =xmcp_ar_data.txt
+ draws_file         =xmcp_ar_draws.txt
+ n                  =         120
+ ndraw              =         600
+ param mean checksum =   23.721040322805255     
+ fitted checksum    =   2285.9538130045125     
+ fitted head checksum =   190.49615108370941     
+ ar mean            =  0.70397338015842514     
+ int mean           =   19.049615108370936     
+ sigma mean         =   3.9674518342758947     
+
+time elapsed (s)
+          xmcp_ar_make_data.py  xmcp_ar_file.R  xsim_mcp_ar_file.exe
+absolute                 0.193           1.196                 0.167
+relative                 0.162           1.000                 0.140
+
+Completed successfully.
+
+=== xmcp_ar_change (113/117) ===
+[1/3] Running xmcp_ar_change_make_data.py
+wrote xmcp_ar_change_data.txt with 180 rows
+true params = {cp_1: 80, cp_2: 140, int_1: -20, sigma_1: 5, ar1_1: 0.7, ar2_1: -0.4, x_2: 0.5, ar1_2: 0.5, ar1_x_2: -0.02}
+
+[2/3] Running xmcp_ar_change_file.R
+Warning messages:
+1: package 'dplyr' was built under R version 4.4.3 
+2: package 'tidyr' was built under R version 4.4.3 
+3: package 'tidyselect' was built under R version 4.4.3 
+4: package 'future' was built under R version 4.4.3 
+5: package 'future.apply' was built under R version 4.4.3 
+6: package 'coda' was built under R version 4.4.3 
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 180
+   Unobserved stochastic nodes: 9
+   Total graph size: 3995
+
+Initializing model
+
+Finished sampling in 1.4 seconds
+
+file = xmcp_ar_change_data.txt 
+draws_file = xmcp_ar_change_draws.txt 
+repo = C:/rcode/public_domain/github/mcp 
+n = 180 
+ndraw = 600 
+chains = 3
+iter = 200
+adapt = 100
+cp mean checksum = 99.028546488264539 
+param mean checksum = 86.924621775551770 
+fitted checksum = -1510.395942695619169 
+fitted head checksum = -250.313362779162418 
+ar checksum = 0.826350037751636 
+sigma mean = 11.673356481019214 
+
+[3/3] Running xsim_mcp_ar_change_file.exe
+ file               =xmcp_ar_change_data.txt
+ draws_file         =xmcp_ar_change_draws.txt
+ n                  =         180
+ ndraw              =         600
+ cp mean checksum   =   99.028546488264453     
+ param mean checksum =   86.924621775551685     
+ fitted checksum    =  -1510.3959426956194     
+ fitted head checksum =  -250.31336277916236     
+ ar checksum        =  0.82635003775163662     
+ sigma mean         =   11.673356481019214     
+
+time elapsed (s)
+          xmcp_ar_change_make_data.py  xmcp_ar_change_file.R  xsim_mcp_ar_change_file.exe
+absolute                        0.208                  2.415                        0.166
+relative                        0.086                  1.000                        0.069
+
+Completed successfully.
+
+=== xmcp_arsigma (114/117) ===
+[1/3] Running xmcp_arsigma_make_data.py
+wrote xmcp_arsigma_data.txt with 140 rows
+true params = {cp_1: 70, int_1: 15, x_2: 0.3, sigma_1: 3, sigma_x_1: 0.03, sigma_2: 6, ar1_1: 0.5, ar1_2: -0.2, ar1_x_2: 0.003, ar2_2: 0.15, ar2_x_2: 0.0}
+
+[2/3] Running xmcp_arsigma_file.R
+Warning messages:
+1: package 'dplyr' was built under R version 4.4.3 
+2: package 'tidyr' was built under R version 4.4.3 
+3: package 'tidyselect' was built under R version 4.4.3 
+4: package 'future' was built under R version 4.4.3 
+5: package 'future.apply' was built under R version 4.4.3 
+6: package 'coda' was built under R version 4.4.3 
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 140
+   Unobserved stochastic nodes: 11
+   Total graph size: 4227
+
+Initializing model
+
+Finished sampling in 1.9 seconds
+
+file = xmcp_arsigma_data.txt 
+draws_file = xmcp_arsigma_draws.txt 
+repo = C:/rcode/public_domain/github/mcp 
+n = 140 
+ndraw = 600 
+chains = 3
+iter = 200
+adapt = 100
+cp mean = 76.544832389576968 
+param mean checksum = 102.773688617498991 
+fitted checksum = 2866.000167677604168 
+fitted head checksum = 157.785900603138856 
+sigma fitted checksum = 691.208092833066189 
+sigma head checksum = 33.112216979890256 
+ar checksum = 0.869322112416235 
+sigma param checksum = 9.267278059652210 
+
+[3/3] Running xsim_mcp_arsigma_file.exe
+ file               =xmcp_arsigma_data.txt
+ draws_file         =xmcp_arsigma_draws.txt
+ n                  =         140
+ ndraw              =         600
+ cp mean            =   76.544832389577024     
+ param mean checksum =   102.77368861749905     
+ fitted checksum    =   2866.0001676776055     
+ fitted head checksum =   157.78590060313897     
+ sigma fitted checksum =   691.20809283306528     
+ sigma head checksum =   33.112216979890249     
+ ar checksum        =  0.86932211241623492     
+ sigma param checksum =   9.2672780596522042     
+
+time elapsed (s)
+          xmcp_arsigma_make_data.py  xmcp_arsigma_file.R  xsim_mcp_arsigma_file.exe
+absolute                      0.193                3.472                      0.190
+relative                      0.056                1.000                      0.055
+
+Completed successfully.
+
+=== xsegmented (115/117) ===
+[1/3] Running xsegmented_make_data.py
+wrote xsegmented_data.txt with 120 rows
+true breakpoint = 60
+
+[2/3] Running xsegmented_file.R
+Loading required package: MASS
+Loading required package: nlme
+Warning message:
+package 'segmented' was built under R version 4.4.3 
+file = xsegmented_data.txt 
+draws_file = xsegmented_draws.txt 
+n = 120 
+psi = 59.518635484703381 
+coef checksum = 6.192078074779041 
+fitted checksum = 3163.568876731997079 
+fitted head checksum = 64.432102984368868 
+intercept = 5.393222199906887 
+x slope = 0.190906927005454 
+hinge slope = 0.607948947866699 
+
+[3/3] Running xsim_segmented_file.exe
+ file               =xsegmented_data.txt
+ draws_file         =xsegmented_draws.txt
+ n                  =         120
+ psi                =   59.518635484703402     
+ coef checksum      =   6.1920780747790429     
+ fitted checksum    =   3163.5688767319921     
+ fitted head checksum =   64.432102984368868     
+ intercept          =   5.3932221999068899     
+ x slope            =  0.19090692700545400     
+ hinge slope        =  0.60794894786669895     
+
+time elapsed (s)
+          xsegmented_make_data.py  xsegmented_file.R  xsim_segmented_file.exe
+absolute                    0.278              0.693                    0.137
+relative                    0.401              1.000                    0.198
+
+Completed successfully.
+
+=== xsegmented_multi (116/117) ===
+[1/3] Running xsegmented_multi_make_data.py
+wrote xsegmented_multi_data.txt with 180 rows
+true breakpoints = [60, 120]
+
+[2/3] Running xsegmented_multi_file.R
+Loading required package: MASS
+Loading required package: nlme
+Warning message:
+package 'segmented' was built under R version 4.4.3 
+file = xsegmented_multi_data.txt 
+draws_file = xsegmented_multi_draws.txt 
+n = 180 
+psi checksum = 179.549648278779330 
+coef checksum = 2.163197940221851 
+fitted checksum = 4534.357883549893813 
+fitted head checksum = 30.645897144307142 
+intercept = 2.261771966329389 
+x slope = 0.145966863291150 
+hinge1 slope = 0.405535254795704 
+hinge2 slope = -0.650076144194392 
+
+[3/3] Running xsim_segmented_multi_file.exe
+ file               =xsegmented_multi_data.txt
+ draws_file         =xsegmented_multi_draws.txt
+ n                  =         180
+ psi checksum       =   179.54964827877950     
+ coef checksum      =   2.1631979402218522     
+ fitted checksum    =   4534.3578835499038     
+ fitted head checksum =   30.645897144307146     
+ intercept          =   2.2617719663293898     
+ x slope            =  0.14596686329115000     
+ hinge1 slope       =  0.40553525479570401     
+ hinge2 slope       = -0.65007614419439197     
+
+time elapsed (s)
+          xsegmented_multi_make_data.py  xsegmented_multi_file.R  xsim_segmented_multi_file.exe
+absolute                          0.302                    0.413                          0.135
+relative                          0.731                    1.000                          0.326
+
+Completed successfully.
+
+=== xstepmented (117/117) ===
+[1/3] Running xstepmented_make_data.py
+wrote xstepmented_data.txt with 120 rows
+true jumpoint = 60
+
+[2/3] Running xstepmented_file.R
+Loading required package: MASS
+Loading required package: nlme
+Warning message:
+package 'segmented' was built under R version 4.4.3 
+file = xstepmented_data.txt 
+draws_file = xstepmented_draws.txt 
+n = 120 
+psi = 59.502871538078907 
+coef checksum = 11.908886636329509 
+fitted checksum = 957.456760619299871 
+fitted head checksum = 39.155029797152515 
+intercept = 3.915502979715252 
+jump = 7.993383656614257 
+
+[3/3] Running xsim_stepmented_file.exe
+ file               =xstepmented_data.txt
+ draws_file         =xstepmented_draws.txt
+ n                  =         120
+ psi                =   59.502871538078900     
+ coef checksum      =   11.908886636329511     
+ fitted checksum    =   957.45676061929942     
+ fitted head checksum =   39.155029797152501     
+ intercept          =   3.9155029797152499     
+ jump               =   7.9933836566142604     
+
+time elapsed (s)
+          xstepmented_make_data.py  xstepmented_file.R  xsim_stepmented_file.exe
+absolute                     0.194               0.339                     0.138
+relative                     0.570               1.000                     0.407
+
+Completed successfully.
+
+summary detector time by language (s)
+language  steps    total   mean  median  geomean  share  avg_rank
+Python       42  347.769  8.280   1.987    2.482  0.635     2.071
+R            86  163.418  1.900   0.609    0.740  0.298     2.035
+Fortran     117   36.629  0.313   0.171    0.172  0.067     1.043
+
+setup time (s)
+steps  total   mean  median  geomean
+  117  84.329  0.721   0.231    0.345
