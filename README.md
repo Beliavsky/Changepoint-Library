@@ -111,7 +111,3 @@ Tiny floating-point differences are expected across languages and compilers.
 ## Notes
 
 This repository is organized as a research and replication library rather than a single public API. Many files are standalone experiments or comparison drivers. Stable reuse points are the Fortran modules such as `changepoint.f90`, `cpm_pkg.f90`, `ecp_pkg.f90`, `bcp_pkg.f90`, `mcp_pkg.f90`, `segmented_pkg.f90`, and related package modules.
-
-## License
-
-See `LICENSE`.
