@@ -4,7 +4,7 @@
 
 The project is comparison-driven: most workflows generate deterministic data, run a reference implementation, run the Fortran implementation, and print matching summaries or checksums.
 
-See [`COVERAGE.md`](COVERAGE.md) for the full list of registered comparison cases.
+See [`COVERAGE.md`](COVERAGE.md) for the full list of registered comparison cases, and [`ALGORITHMS.md`](ALGORITHMS.md) for a Fortran module guide.
 
 ## Scope
 
@@ -75,6 +75,15 @@ Use `xrun_compare.py` with a registered case name:
 python xrun_compare.py xchangepointnp
 ```
 
+Run all registered cases, or a limited prefix of them:
+
+```powershell
+python xrun_compare.py --all
+python xrun_compare.py --limit 10
+```
+
+By default, a failed comparison is reported and the runner continues with later cases. Use `--fail-fast` to stop at the first failed case.
+
 A comparison usually performs three steps:
 
 1. Generate a deterministic data file.
@@ -98,6 +107,42 @@ Build the corresponding executable first when a case requires one:
 make xsim_cpm_ks_file
 python xrun_compare.py xcpm_ks
 ```
+
+## Timing Results
+
+The uploaded `results.txt` file is an example full run of:
+
+```powershell
+python xrun_compare.py --all
+```
+
+At the end of the run, `xrun_compare.py` prints a detector-time summary by implementation language. Python data-generation scripts named `*_make_data.py` are excluded from the language comparison because they create shared input files used by all implementations. Their cost is reported separately as setup time.
+
+From the uploaded `results.txt`:
+
+```text
+summary detector time by language (s)
+language  steps    total   mean  median  geomean  share  avg_rank
+Python       42  347.769  8.280   1.987    2.482  0.635     2.071
+R            86  163.418  1.900   0.609    0.740  0.298     2.035
+Fortran     117   36.629  0.313   0.171    0.172  0.067     1.043
+
+setup time (s)
+steps  total   mean  median  geomean
+  117  84.329  0.721   0.231    0.345
+```
+
+The timing columns mean:
+
+- `steps`: number of detector/reference steps run for that language.
+- `total`: total wall-clock seconds spent in that language across the run.
+- `mean`: arithmetic average per detector step.
+- `median`: typical detector step time, robust to one very slow case.
+- `geomean`: geometric mean per detector step, useful for multiplicative speed comparisons.
+- `share`: fraction of detector runtime spent in that language, excluding setup.
+- `avg_rank`: average per-case speed rank, with `1` fastest. Ranks compare language totals within each case, then average over cases where the language appears.
+
+In this run, the Fortran implementations covered all 117 cases, had the smallest total detector time, and had an average speed rank near 1. The Python and R rows are benchmark/reference timings only; they do not include the shared data-generation setup.
 
 ## Validation Style
 
